@@ -1,0 +1,431 @@
+.exceptionQuery{
+  margin-top: 10px;
+  height: 93%;
+  .exceptionInfo{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    height: 23%;
+    .statistics{
+      margin-right: 10px;
+      width: 55%;
+      @media screen and(max-width: 1024px){
+        margin-right: 5px;
+        width: 50%;
+      }
+      .content{
+        display: flex;
+        height: 60%;
+        margin: 1% 0 0 0.5%;
+        .today{
+          width: 52%;
+          display: flex;
+          position: relative;
+          .left{
+            width: 60%;
+            box-shadow: 6px 2px 6px 0px rgba(19, 31, 45, 0.72);
+            border-radius: 2px;
+            opacity: 0.79;
+            display: flex;
+            padding-left: 10px;
+            background: linear-gradient(to right, #1c77a0, transparent);
+            border-left: 5px solid #00a0e9;
+            .info{
+              display: flex;
+              align-content: center;
+              justify-content: space-around;
+              height: 100%;
+              width: 100%;
+              .colOne{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                @media screen and(max-width: 1024px){
+                  font-size: 12px;
+                }
+                .text{
+                  position: relative;
+                  left: -20%;
+                }
+                .number{
+                  span{
+                    font-size: 24px;
+                    letter-spacing: 5px;
+                    color: rgb(55, 217, 252);
+                  }
+                }
+              }
+              .colTwo{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .number{
+                  text-align: center;
+                  span{
+                    font-size: 24px;
+                    letter-spacing: 5px;
+                    color: rgb(255, 0, 0);
+                  }
+                }
+              }
+            }
+          }
+          .graph{
+            flex: 1;
+            div{
+              height: 100% !important;
+            }
+          }
+        }
+        .today::after{
+          width: 2px;
+          height: 85%;
+          position: absolute;
+          background: linear-gradient(#0c3844 10%, #099da7 50%,#0a3844 100%);
+          z-index: 10000;
+          content: '';
+          right: 1%;
+        }
+        .realTime{
+          flex: 1;
+          box-shadow: 6px 2px 6px 0px rgba(19, 31, 45, 0.72);
+          border-radius: 2px;
+          opacity: 0.79;
+          display: flex;
+          .info{
+            display: flex;
+            align-content: center;
+            justify-content: space-around;
+            height: 100%;
+            width: 70%;
+            margin: 0 auto;
+            background: linear-gradient(to right, #1c77a0, transparent);
+            border-left: 5px solid #00a0e9;
+            @media screen and(max-width: 1024px){
+              font-size: 12px;
+            }
+            .colOne{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              .number{
+                span{
+                  font-size: 24px;
+                  letter-spacing: 5px;
+                  color: rgb(55, 217, 252);
+                }
+              }
+            }
+            .colTwo{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              .number{
+                text-align: center;
+                span{
+                  font-size: 24px;
+                  letter-spacing: 5px;
+                  color: rgb(0, 255, 102);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .analyze{
+      flex: 1;
+      .graph{
+        display: flex;
+        height: calc(100% - 25px);
+        >div{
+          height: 85% !important;
+          width: 25% !important;
+          div{
+            height: 100% !important;
+            width: 100% !important;;
+          }
+        }
+        .graphDes{
+          text-align: center;
+          position: relative;
+          top: -15px;
+          @media screen and(max-width: 1024px){
+            font-size: 12px;
+          }
+        }
+        span{
+          font-size: 22px;
+          margin: 0 3px;
+          @media screen and(max-width: 1024px){
+            font-size: 18px;
+            margin: 0px;
+          }
+        }
+        .student span{
+          color: rgb(58, 225, 255);
+        }
+        .teacher span{
+          color: rgb(131, 146, 255);
+        }
+        .logistics span{
+          color: rgb(87, 237, 126);
+        }
+        .visitors span{
+          color: rgb(36, 160, 255);
+        }
+      }
+    }
+    >div{
+      background: rgba(23, 38, 59, 0.9);
+      box-shadow: 0px 3px 4px 1px #000;
+    }
+  }
+
+  .exceptionItems{
+    display: flex;
+    height: 60%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .searchForm{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    @media screen and(max-width: 1024px){
+      height: auto;
+    }
+    .searchArea{
+      height: 100%;
+    }
+  }
+
+  .pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    >div{
+      color: #fff;
+    }
+    >ul{
+      position: relative !important;
+    }
+  }
+
+  .title{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    @media screen and(max-width: 1366px){
+      font-size: 16px;
+    }
+    @media screen and(max-width: 1024px){
+      font-size: 12px;
+    }
+    .text{
+      position: relative;
+    }
+    .text::before{
+      content: '';
+      width: 3px;
+      height: 80%;
+      position: absolute;
+      left: -7px;
+      top: 4px;
+      background: linear-gradient(to bottom, #0ff, blue);
+    }
+    .time{
+      letter-spacing: 5px;
+      .active{
+        color: #0da6ef;
+      }
+      span{
+        cursor: pointer;
+      }
+    }
+  }
+
+  :global(.ant-form .ant-form-item){
+    margin-right: 2%;
+    @media screen and(max-width: 1024px){
+      margin-right: 0%;
+      margin-bottom: 3px;
+    }
+  }
+  :global(.ant-picker-separator){
+    color: rgb(15, 101, 113) !important;
+  }
+  :global(.ant-picker-suffix){
+    display: none !important;
+  }
+  :global(.ant-picker-range .ant-picker-input){
+    position: relative;
+  }
+  :global(button[type='button']){
+    display: none;
+  }
+  :global(.ant-form > div:first-child > div:last-child){
+    border: 1px dotted #30bbbb;
+    background: rgba(23,38,59,0.9);
+    border-radius: 4px;
+    padding-left: 10px;
+    height: 36px;
+    @media screen and(max-width: 1024px){
+      height: 32px;
+    }
+  }
+
+}
+
+.infoModal{
+  position: relative;
+  top: 15%;
+  width: 1000px !important;
+  @media screen and(max-width: 1024px){
+    width: 520px !important;
+  }
+  .img{
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
+    @media screen and(max-width: 1024px){
+      width: 150px;
+      height: 150px;
+    }
+    >img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .textarea {
+    width: 100% !important;
+    :global(.ant-form-item-label.ant-col-sm-8 ){
+      max-width: 16%;
+    }
+    :global(.ant-form-item-control.ant-col-sm-16 ){
+      max-width: 84%;
+    }
+  }
+  :global(.ant-modal-content){
+    background: rgba(22,34,49,0.9) !important;
+    border: 1px dotted #31b9b9;
+    box-shadow: 0px 0px 8px 0px inset #31b9b9;
+  }
+  :global(.ant-modal-header){
+    background: none;
+    border-bottom: 0;
+  }
+  :global(.ant-modal-body){
+    display: flex;
+    position: relative;
+  }
+  :global(.ant-modal-body > div:nth-child(2)){
+    flex: 1;
+    padding: 0 5%;
+    @media screen and(max-width: 1024px){
+      padding: 0 2%;
+    }
+  }
+  :global(.ant-modal-title){
+    color: rgba(255,255,255,0.65);
+  }
+  :global(.ant-modal-footer){
+    display: flex;
+    justify-content: flex-end;
+  }
+  :global(.ant-modal-footer > div){
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 35px;
+  }
+  :global(.ant-modal-footer .ant-btn){
+    border: 1px dotted #74b6b9 !important;
+    background: rgba(22, 34, 49, 0.9);
+    color: rgb(56, 220, 255);
+  }
+
+  :global(.ant-modal-footer .ant-btn-primary){
+    display: none;
+  }
+
+  :global(.basic-form){
+    flex: 1;
+    margin-left: 30px;
+  }
+  :global(.ant-form){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  :global(.ant-form >div[type='textarea']){
+    width: 100%;
+  }
+  :global(.ant-form >div[type='textarea'] .ant-form-item-control-input){
+    width: 95%;
+  }
+  :global(.ant-form textarea){
+    height: 32px;
+  }
+  :global(.ant-form >div[type='textarea'] .ant-form-item-label){
+    width: 75px !important;
+    flex: none !important;
+  }
+  :global(.ant-form >div[type='textarea'] .ant-col-sm-16){
+    @media screen and(min-width: 576px){
+      max-width: 100%;
+    }
+  }
+  :global(.ant-form .ant-form-item){
+    width: 48%;
+  }
+  :global(.ant-form .ant-form-item-control-input-content .ant-input){
+    border: 1px dotted #74b6b9 !important;
+    background: rgba(22,34,49,0.9);
+    color: #F4F4F4;
+  }
+  :global(.ant-form .ant-form-item-label){
+    white-space: nowrap;
+  }
+  :global(.ant-form .ant-form-item-label > label){
+    color: #F4F4F4;
+    display: inline-block;
+    text-align-last: justify;
+    width: 100% !important;
+    line-height: 32px;
+    @media screen and(max-width: 1024px){
+      font-size: 12px;
+    }
+  }
+}
+
+.confirmModal{
+  top: 30%;
+  border:1px dotted #74b6b9;
+  padding: 0;
+
+  :global(.ant-modal-content){
+    background-color: rgba(22, 34, 49,0.8);
+    box-shadow: 0px 1px 20px 1px inset rgb(26, 56, 73);
+  }
+  :global(.ant-modal-content .ant-modal-body){
+    text-align: center;
+  }
+  :global(.ant-modal-content .ant-modal-footer > div){
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+  :global(.ant-modal-content .ant-modal-footer button:first-child){
+    border: 1px dotted #3b7b82;
+    background: transparent;
+    color: #5eddea;
+    margin-left: 20px;
+  }
+  :global(.ant-modal-content .ant-modal-footer button:last-child){
+    border: 1px dotted #3b7b82;
+    background: transparent;
+    color: #5eddea;
+  }
+}

@@ -1,0 +1,190 @@
+.searchArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  @media screen and(max-width: 1366px){
+    height: auto;
+    margin-top: 10px;
+  }
+  @media screen and(max-width: 1024px){
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .searchForm {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    align-items: center;
+    -webkit-align-items: center;
+    flex: 1;
+    -webkit-flex: 1;
+    .antFormItem {
+      margin: 0;
+      height: 36px;
+      :global {
+        .ant-form-item-label {
+          text-align: left;
+          flex: none;
+          &>label {
+            font-weight: bold;
+            font-size: 16px;
+            height: 36px;
+            color: white;
+            @media screen and(max-width: 1366px){
+              font-size: 14px;
+            }
+            @media screen and(max-width: 1024px){
+              font-size: 12px;
+            }
+          }
+        }
+        .ant-form-item-control {
+          flex: none;
+          max-width: 62.25%;
+          @media screen and (max-width: 1024px) {
+            width: auto;
+          }
+          .ant-form-item-control-input{
+            min-height: 36px;
+            input {
+              width: 150px;
+              color: #fff !important;
+              height: 36px;
+              font-size: 16px;
+              border: 1px dotted #30bbbb;
+              background: rgba(23, 38, 59, 0.9);
+              border-radius: 4px;
+              box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.36);
+              @media screen and(max-width: 1366px){
+                width: 120px;
+              }
+              @media screen and(max-width: 1024px){
+                height: 32px;
+                font-size: 12px;
+                width: 110px;
+              }
+            }
+            input::-webkit-input-placeholder { /* WebKit browsers */
+              color: #ccc !important;
+              font-size: 14px;
+            }
+            input::-moz-placeholder { /* Mozilla Firefox 19+ */
+              color: #ccc !important;
+              font-size: 14px;
+            }
+            input:-ms-input-placeholder { /* Internet Explorer 10+ */
+              color: #ccc !important;
+              font-size: 14px;
+            }
+            .ant-picker-range {
+              color: #fff;
+              font-size: 16px;
+              border: none;
+              padding: 0;
+              background: none;
+              &.ant-picker-focused {
+                opacity: 0.6;
+                box-shadow: none;
+              }
+              .ant-picker-active-bar {
+                margin: 0;
+              }
+              .ant-picker-clear {
+                background: none;
+                right: 0;
+                color: #eee;
+              }
+              .ant-picker-clear:hover{
+                color: #ddd;
+              }
+              input {
+                box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.36);
+                width: 100px;
+                color: #fff;
+              }
+              .ant-picker-separator,
+              .ant-picker-suffix {
+                color: rgba(0, 0, 0, 0.5);
+              }
+            }
+          }
+          .ant-select{
+            width: 150px;
+            color: rgba(0, 0, 0, 0.65);
+            @media screen and(max-width: 1366px){
+              width: 120px;
+            }
+            @media screen and(max-width: 1024px){
+              width: 110px;
+            }
+            .ant-select-selector{
+              background-color: rgba(23, 38, 59, 0.9);
+              border: 1px dotted #30bbbb;
+              .ant-select-selection-placeholder{
+                color: white;
+              }
+              .ant-select-selection-item{
+                color: #fff;
+              }
+            }
+            .ant-select-arrow{
+              color: #fff;
+            }
+          }
+          .ant-radio-group{
+            display: flex;
+            .ant-radio-wrapper{
+              span:last-child{
+                font-size: 16px;
+                font-weight: bolder;
+                @media screen and(max-width: 1024px){
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .button {
+    display: flex;
+    .boxBtn {
+      width: auto;
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      @media screen and (max-width: 1024px) {
+        width: auto;
+      }
+      Button {
+        margin: 0 0 0 10px;
+        padding: 0;
+        width: 114px;
+        height: 36px;
+        text-align: center;
+        border-radius: 5px;
+        line-height: 36px;
+        font-size: 20px;
+        color: #000;
+        background-color: rgb(56, 220, 255);
+        box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.6);
+        border: none;
+        letter-spacing: 2px;
+        @media screen and(max-width: 1366px){
+          width: 90px;
+          font-size: 16px;
+        }
+        @media screen and(max-width: 1024px){
+          width: 70px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+@import '~antd/es/style/themes/default.less';
+
+.main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  //background: url(~@/assets/login/background.png) center center no-repeat;
+  .loginArea {
+    position: relative;
+    top: 32%;
+    width: 50vw;
+    margin: 0 auto;
+    display: flex;
+    @media screen and (max-width: 900px){
+      width: 80%;
+    }
+    .left{
+      text-align: center;
+      padding: 2% 0;
+      border-right: 1px solid #898989;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      //min-width: 320px;
+      img:first-child{
+        position: relative;
+        top: 10%;
+        width: 53%;
+      }
+      img{
+        width: 100%;
+        @media screen and (max-width: 900px){
+          width: 100%;
+        }
+      }
+    }
+    .right{
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 320px;
+      @media screen and (max-width: 700px) {
+        min-width: 200px;
+      }
+      :global(.ant-form){
+        width: 350px;
+      }
+      :global(.ant-form-item){
+        @media screen and (max-width: 660px){
+          width: 210px;
+        }
+      }
+      :global(.ant-form-item-control){
+        @media screen and (max-width: 660px){
+          flex: 1 1;
+        }
+      }
+      :global(.ant-form-item-has-error .ant-input:focus){
+        background-color: transparent !important;
+        border: none;
+        border-bottom: 1px solid rgb(56, 220, 255);
+        box-shadow: none;
+      }
+      :global(.ant-input){
+        background-color: transparent !important;
+        border: none;
+        box-shadow: none;
+        color: rgb(56, 220, 255);
+        padding-left: 20%;
+        font-size: 16px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        @media screen and (max-width: 700px) {
+          width: 175px;
+        }
+      }
+      input:-webkit-autofill{
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        -webkit-text-fill-color: rgb(56, 220, 255);
+        border-bottom: 1px solid rgb(56, 220, 255);
+      }
+      .userNameLight input, .passwordLight input{
+        border-bottom: 1px solid rgb(56, 220, 255);
+      }
+      .userNameDark input, .passwordDark input{
+        border-bottom: 1px solid #ccc;
+      }
+      .userNameLight::before, .userNameDark::before, .passwordLight::before, .passwordDark::before{
+        content: '';
+        position: relative;
+        width: 30px;
+        height: 30px;
+        left: 30px;
+      }
+      .userNameLight::before{background: url(~@/assets/login/username_light.png) center center no-repeat;}
+      .userNameDark::before{background: url(~@/assets/login/username_dark.png) center center no-repeat;}
+      .passwordLight::before{background: url(~@/assets/login/password_light.png) center center no-repeat;}
+      .passwordDark::before{background: url(~@/assets/login/password_dark.png) center center no-repeat;}
+      .loginButtonDiv{
+        text-align: center;
+        margin-top: 45px;
+        margin-left: 10%;
+        .loginButton{
+          background: -webkit-linear-gradient(to right,rgb(0, 53, 205),rgb(101, 252, 254));
+          background: -o-linear-gradient(to right,rgb(0, 53, 205),rgb(101, 252, 254));
+          background: -moz-linear-gradient(to right,rgb(0, 53, 205),rgb(101, 252, 254));
+          background: linear-gradient(to right,rgb(0, 53, 205),rgb(101, 252, 254));
+          width: 100%;
+          border: none;
+          height: 44px;
+          border-radius: 35px;
+          span{
+            font-size: 16px;
+            color: #ffffff;
+          }
+        }
+      }
+      .loginMessage{
+        color: red;
+        text-align: center;
+      }
+    }
+  }
+
+  .footer{
+    position: fixed;
+    bottom: 2%;
+    color: #ccc;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 14px;
+    .footerTop{
+      letter-spacing: 1px;
+    }
+  }
+
+  :global(.ant-input-affix-wrapper){
+    @media screen and (max-width: 700px){
+      width: 80%;
+    }
+
+  }
+
+}

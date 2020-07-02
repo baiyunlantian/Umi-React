@@ -1,0 +1,1148 @@
+.classDetail{
+  margin-top: 10px;
+  height: 93%;
+  color: #fff;
+  position: relative;
+
+  .button{
+    position: absolute;
+    right: 0;
+    top: -45px;
+    display: flex;
+    background: none;
+    box-shadow: none;
+    @media screen and(max-width: 1024px){
+      top: -40px;
+    }
+    .goBack{
+      border: 1px dotted #3b7b82;
+      background: transparent;
+      color: rgb(56, 220, 255);
+      width: 100px;
+      height: 35px;
+      line-height: 35px;
+      letter-spacing: 5px;
+      padding-left: 10px;
+      border-radius: 4px;
+      box-shadow: 0px 1px 4px 1px #000;
+      text-align: center;
+      cursor: pointer;
+      @media screen and(max-width: 1024px){
+        width: 80px;
+        height: 25px;
+        line-height: 25px;
+      }
+    }
+  }
+  .classOperation{
+    height: 25%;
+    display: flex;
+    .left{
+      width: 32px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      line-height: 14px;
+      @media screen and(max-width: 1024px){
+        font-size: 12px;
+      }
+      >div{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .item{
+        color: rgb(56, 220, 255);
+        border: 1px dotted #3b7b82;
+        border-right: none;
+      }
+      .activeItem{
+        background: rgb(56, 220, 255);
+        color: #000;
+        border: 1px solid rgb(56, 220, 255);
+        border-right: none;
+      }
+    }
+    .right{
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-left: 1px solid rgb(56, 220, 255);
+      border-top: 1px solid rgb(56, 220, 255);
+      border-image: linear-gradient(to left,#052c8c,#23b7cb) 1 10;
+      .gradeList{
+        display: flex;
+        margin: 2px 0 0 10px;
+        height: 35px;
+        >div{
+          width: 100px;
+          line-height: 35px;
+          border-radius: 4px;
+          text-align: center;
+          letter-spacing: 2px;
+          box-shadow: 0px 1px 5px 1px #000;
+          margin-right: 10px;
+          cursor: pointer;
+          @media screen and(max-width: 1024px){
+            width: 70px;
+            font-size: 14px;
+          }
+        }
+        .gradeItem{
+          border: 1px dotted #3b7b82;
+          color: #38dcff;
+          border-top: none;
+        }
+        .currentGrade{
+          background: #38dcff;
+          border: none;
+          color: #000;
+        }
+        .addGradeButton{
+          border: 1px dotted #3b7b82;
+          color: #38dcff;
+          border-top: none;
+          font-size: 24px;
+          line-height: 24px;
+        }
+        .tips{
+          color: rgb(195, 144, 67);
+          position: absolute;
+          right: 0;
+          width: auto;
+          box-shadow: none;
+          font-size: 14px;
+          @media screen and(max-width: 1024px){
+            font-size: 12px;
+          }
+        }
+      }
+      .classList{
+        border: 1px dotted #3b7b82;
+        height: calc(100% - 50px);
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        background: rgba(23, 35, 51,0.5);
+        position: relative;
+        box-shadow: 0px 2px 5px 1px #000;
+        .classCheckbox{
+          display: flex;
+          margin-right: 35px;
+          >div{
+            cursor: pointer;
+            margin-left: 30px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 50px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            >label{
+              position: absolute;
+              left: 0;
+              bottom: 20px;
+            }
+          }
+        }
+        .addClassButton{
+          border: 1px dotted #3b7b82;
+          color: #38dcff;
+          font-size: 65px;
+          line-height: 24px;
+          width: 45px;
+          height: 45px;
+          text-align: center;
+          position: relative;
+          top: -15px;
+          cursor: pointer;
+        }
+        .currentClass{
+          color: #38dcff;
+        }
+        .classItem{
+          color: #fff;
+        }
+        .delClassItemImg{
+          width: 25px;
+          height: 25px;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+        }
+        .delClassItemButton{
+          width: 90px;
+          height: 30px;
+          line-height: 30px;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          color: #000;
+          background: #38dcff;
+          text-align: center;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+
+  .bottom{
+    height: 75%;
+    display: flex;
+    margin-top: 15px;
+    background: rgba(23, 35, 51,0.8);
+    padding-bottom: 10px;
+    .classInfo{
+      flex: 1;
+      margin:0 20px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      @media screen and(max-width: 1024px){
+        margin:0 10px;
+      }
+      .classContent{
+        border: 1px dotted #3b7b82;
+        margin-top: 15px;
+        flex: 1;
+        box-shadow: 0px 0px 10px 0px inset #3b7b82;
+        position: relative;
+        .count {
+          width: 37.5% !important;
+          @media screen and(max-width: 1024px){
+            width: 45.5% !important;
+          }
+          :global(.ant-form-item-label.ant-col-sm-6 ){
+            flex: 0 0 40%;
+            max-width: 45%;
+          }
+          :global(.ant-form-item-control.ant-col-sm-16) {
+            width: 49%;
+            flex: none;
+            input {
+              border: none !important;
+              border-bottom: 1px dotted #74b6b9 !important;
+              font-size: 16px;
+              line-height: 16px;
+              color: #38dcff;
+            }
+          }
+        }
+        .operationUpdateOrDel{
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+        .classInfoEditImg{
+          width: 20px;
+          height: 20px;
+          position:absolute;
+          top: 5px;
+          right: 5px;
+        }
+        .graph{
+          height: 40%;
+          div{
+            height: 80% !important;
+          }
+        }
+        .classInfoOperation{
+          position: absolute;
+          top: -35px;
+          right: 0;
+          >button{
+            border: 1px dotted #74b6b9 !important;
+            background: rgba(22, 34, 49, 0.9);
+            color: rgb(56, 220, 255);
+            width: 60px;
+            border-radius: 3px;
+          }
+          >button:last-child{
+            margin-left: 20px;
+          }
+        }
+      }
+      .title{
+        display: flex;
+        justify-content: space-between;
+        .text{
+          position: relative;
+        }
+        .text::before{
+          content: '';
+          width: 3px;
+          height: 80%;
+          position: absolute;
+          left: -7px;
+          top: 4px;
+          background: linear-gradient(to bottom, #0ff, blue);
+        }
+      }
+
+
+      :global(.ant-form) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 90%;
+        position: relative;
+        top: 15px;
+      }
+
+      :global(.ant-form .ant-form-item) {
+        width: 75%;
+        margin-bottom: 0;
+        margin-top: 3%;
+      }
+
+      :global(.ant-form .ant-form-item-control-input-content .ant-input) {
+        border: 1px dotted #74b6b9 !important;
+        background: rgba(22, 34, 49, 0.9);
+        color: #F4F4F4;
+        text-align: center;
+      }
+
+      :global(.ant-form .ant-form-item-control .ant-select .ant-select-selector) {
+        border: 1px dotted #74b6b9 !important;
+        background: rgba(22, 34, 49, 0.9);
+      }
+
+      :global(.ant-form .ant-form-item-control .ant-select .ant-select-selection-item) {
+        color: #F4F4F4;
+        text-align: center;
+      };
+
+      :global(.ant-form .ant-form-item-control .ant-select .ant-select-arrow) {
+        color: #F4F4F4;
+      };
+
+      :global(.ant-form .ant-form-item-control-input) {
+        min-height: 28px !important;
+      }
+
+      :global(.ant-form .ant-form-item-control-input-content .ant-input) {
+        border: 1px dotted #74b6b9 !important;
+        background: rgba(22, 34, 49, 0.9);
+        color: #F4F4F4;
+        text-align: center;
+        padding: 2px 11px !important;
+      }
+
+      :global(.ant-form .ant-form-item-label) {
+        white-space: nowrap;
+        overflow: visible;
+      }
+
+      :global(.ant-form .ant-form-item-label > label) {
+        color: #F4F4F4;
+        display: inline-block;
+        text-align-last: justify;
+        width: 100% !important;
+        line-height: 32px;
+        position: relative;
+      }
+      :global(.ant-form .ant-form-item-label > label[for='name']) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      :global(.ant-form .ant-form-item-label > label[for='departmentId']) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      :global(.ant-form .ant-form-item-label > label[for='grade']:before) {
+        content: "排序关系到升级，请谨慎操作!";
+        position: absolute;
+        top: 20px;
+        left: 90px;
+        font-size: 12px;
+        color: #c3c3c3;
+        @media screen and(max-width: 1024px){
+          left: 60px;
+        }
+      }
+      :global(.ant-form .ant-form-item-label > label[for='sort']:before) {
+        content: "排序关系到升级，请谨慎操作!";
+        position: absolute;
+        top: 20px;
+        left: 4vw;
+        font-size: 12px;
+        color: #c3c3c3;
+        @media screen and(max-width: 1366px){
+          left: 6vw;
+        }
+        @media screen and(max-width: 1024px){
+          left: 5vw;
+        }
+      }
+      :global(.ant-form .ant-col-sm-16) {
+        max-width: none !important;
+      }
+
+      :global(.editing){
+        :global(.ant-modal-footer .ant-btn-primary){
+          display: inline-block;
+        }
+        :global(.ant-form .ant-form-item-control-input-content .ant-input) {
+          color: rgb(56, 220, 255);
+        }
+
+        :global(.ant-form .ant-form-item-control .ant-select .ant-select-selection-item) {
+          color: rgb(56, 220, 255);
+          text-align: center;
+        };
+      }
+
+    }
+
+    .studentList{
+      width: 80%;
+      margin-top: 15px;
+      @media screen and(max-width: 1366px){
+        width: 70%;
+      }
+      .studentTop{
+        display: flex;
+        justify-content: space-between;
+        height: 24px;
+        position: relative;
+        img{
+          right: 20px;
+          width: 20px;
+          height: 20px;
+        }
+        .delStudentBtn{
+          width: 90px;
+          height: 30px;
+          line-height: 30px;
+          position: absolute;
+          top: -15px;
+          right: 10px;
+          color: #000;
+          background: #38dcff;
+          text-align: center;
+          border-radius: 4px;
+        }
+      }
+      .list{
+        height: calc(100% - 25px);
+        border: 1px dotted #3b7b82;
+        box-shadow: 0px 0px 10px 0px inset #3b7b82;
+        padding: 2%;
+        overflow: auto;
+        .studentCheckbox{
+          display: flex;
+          flex-wrap: wrap;
+          align-content: flex-start;
+          height: 100%;
+          >div{
+            width: 7%;
+            margin-right: 3%;
+            height: 24%;
+            margin-bottom: 1%;
+            min-height: 100px;
+            min-width: 75px;
+            position: relative;
+            @media screen and(max-width: 1024px){
+              margin-right: 1%;
+            }
+            >label{
+              display: inline-block;
+              position: absolute;
+              bottom: 26px;
+            }
+          }
+          .addClassButton{
+            color: #38dcff;
+            width: 7%;
+            margin-right: 3%;
+            height: 24%;
+            margin-bottom: 1%;
+            min-height: 100px;
+            min-width: 75px;
+            @media screen and(max-width: 1024px){
+              margin-right: 1%;
+            }
+            .studentImg{
+              border: 1px dotted #3b7b82;
+              position: relative;
+            }
+          }
+          .studentImg{
+            width: 100%;
+            height: 75%;
+            min-width: 50px;
+            min-height: 50px;
+            border: 1px solid white;
+            img{
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .studentText{
+            text-align: center;
+            white-space: nowrap;
+            color: #fff;
+          }
+        }
+        .boxBtn {
+          text-align: center;
+          margin-top: 40px;
+          &> button:first-child {
+            margin-right: 35px;
+            border: 1px dotted #3b7b82;
+            background: transparent;
+            color: #5eddea;
+          }
+          &> button:last-child {
+            background: #35d7ff;
+            color: #282d2d;
+            border: none;
+          }
+        }
+        :global(.ant-form .ant-form-item){
+          @media screen and(max-width: 1366px){
+            width: 30%;
+          }
+        }
+        :global(.ant-form .ant-form-item-label > label){
+          @media screen and(max-width: 1024px){
+            font-size: 12px;
+          }
+        }
+        :global(.ant-form .boxBtn Button){
+          @media screen and(max-width: 1024px){
+            width: 60px;
+            font-size: 14px;
+          }
+        }
+        :global(.ant-table-wrapper){
+          width: 100%;
+          height: 70%;
+          overflow: auto;
+        }
+        :global(.ant-table-wrapper .ant-table){
+          width: 100%;
+          overflow: auto;
+          @media screen and(max-width: 1366px){
+            width: 1366px;
+          }
+        }
+        :global(.ant-table-wrapper .ant-table thead > tr > th){
+          @media screen and(max-width: 1366px){
+            padding: 8px 2px;
+          }
+        }
+        :global(.ant-table-wrapper .ant-table tbody > tr > td){
+          @media screen and(max-width: 1366px){
+            padding: 8px 2px;
+          }
+        }
+        :global(.ant-table-wrapper .ant-table-pagination.ant-pagination){
+          position: relative;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+:global{
+  .customModal{
+    :global(.ant-form-item-label > label){
+      color: #fff;
+    }
+    :global(.ant-form-item-control-input .ant-input){
+      background: transparent;
+      border: 1px dotted #30bbbb !important;
+      color: #fff;
+    }
+    :global(.ant-modal-content){
+      background: rgba(22,34,49,0.9) !important;
+      border: 1px dotted #31b9b9;
+      box-shadow: 0px 0px 8px 0px inset #31b9b9;
+    }
+    :global(.ant-modal-header){
+      background: none;
+      border-bottom: 0;
+    }
+    :global(.ant-modal-body){
+      display: flex;
+      position: relative;
+      height: 150px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    :global(.ant-modal-title){
+      color: rgba(255,255,255,1);
+    }
+    :global(.ant-modal-footer > div){
+      display: flex;
+      flex-direction: row-reverse;
+      margin-right: 35px;
+    }
+
+    :global(.ant-modal-footer .ant-btn){
+      color: rgb(0,0,0);
+      background: rgb(56, 220, 255);
+      border:none;
+      margin-left: 30px;
+    }
+
+    :global(.ant-modal-footer .ant-btn-primary){
+      border: 1px dotted #74b6b9 !important;
+      background: rgba(22, 34, 49, 0.9);
+      color: rgb(56, 220, 255);
+    }
+  }
+
+  .delStudentItemModal{
+    .delTips{
+      font-size: 12px;
+      color: #c1c1c1;
+    }
+    .active-del-way {
+      span:last-child{
+        color: #38dcff !important;
+      }
+    }
+    :global(.ant-radio-group){
+      display: flex;
+    }
+    :global(.ant-radio-group .ant-radio-wrapper span:last-child){
+      color: #c1c1c1;
+    }
+    :global(.ant-modal-content){
+      background: rgba(22,34,49,0.9) !important;
+      border: 1px dotted #31b9b9;
+      box-shadow: 0px 0px 8px 0px inset #31b9b9;
+    }
+    :global(.ant-modal-header){
+      background: none;
+      border-bottom: 0;
+    }
+    :global(.ant-modal-body){
+      display: flex;
+      position: relative;
+      padding: 0 50px;
+      height: 150px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    :global(.ant-modal-title){
+      color: rgba(255,255,255,1);
+    }
+    :global(.ant-modal-footer > div){
+      display: flex;
+      justify-content: center;
+      flex-direction: row-reverse;
+    }
+
+    :global(.ant-modal-footer .ant-btn){
+      color: rgb(0,0,0);
+      background: rgb(56, 220, 255);
+      border:none;
+      margin-left: 30px;
+    }
+
+    :global(.ant-modal-footer .ant-btn-primary){
+      border: 1px dotted #74b6b9 !important;
+      background: rgba(22, 34, 49, 0.9);
+      color: rgb(56, 220, 255);
+    }
+  }
+
+  .studentDetailModal{
+    position: relative;
+    top: 10%;
+    width: 1000px !important;
+    @media screen and(max-width: 1024px){
+      width: 80% !important;
+    }
+    .editImg{
+      position: absolute;
+      right: 5%;
+      top: -5%;
+      width: 25px;
+      height: 25px;
+    }
+
+    .masker-layout{
+      position: absolute;
+      width: 90%;
+      height: 100%;
+      z-index: 100;
+    }
+    .updateBox{
+      display: flex;
+      .leftUpdate {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .studentUpload{
+          width: 100%;
+          .Upload {
+            width: 250px;
+            height: 250px;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+            @media screen and(max-width: 1366px){
+              width: 200px;
+              height: 200px;
+              margin: 0 auto;
+            }
+            @media screen and(max-width: 1024px){
+              width: 150px;
+              height: 150px;
+              margin: 0 auto;
+            }
+          }
+          .watermark {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            border: 0.5px solid #ccc;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 0 auto;
+            @media screen and(max-width: 1366px){
+              width: 200px;
+              height: 200px;
+              margin: 0 auto;
+            }
+            @media screen and(max-width: 1024px){
+              width: 150px;
+              height: 150px;
+              margin: 0 auto;
+            }
+            &:after {
+              background: url(~@/assets/person_picture/vtouch.png) no-repeat center;
+              background-size: contain;
+              opacity: 0.4;
+              width: 50%;
+              height: 50%;
+              position: absolute;
+              content: '';
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+          .btnUpload {
+            width: 180px;
+          }
+        }
+        .guardianUpload{
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .guardianItem{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            .Upload {
+              width: 100px;
+              height: 100px;
+              border: 1px solid #ccc;
+              margin: 0 auto;
+              @media screen and(max-width: 1024px){
+                width: 75px;
+                height: 75px;
+                margin: 0 auto;
+              }
+            }
+            .watermark {
+              position: relative;
+              width: 100px;
+              height: 100px;
+              border: 0.5px solid #ccc;
+              box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+              border-radius: 4px;
+              overflow: hidden;
+              margin: 0 auto;
+              @media screen and(max-width: 1024px){
+                width: 75px;
+                height: 75px;
+                margin: 0 auto;
+              }
+              &:after {
+                background: url(~@/assets/person_picture/vtouch.png) no-repeat center;
+                background-size: contain;
+                opacity: 0.4;
+                width: 50%;
+                height: 50%;
+                position: absolute;
+                content: '';
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+            .btnUpload {
+              width: auto;
+            }
+          }
+        }
+        .btnUpload {
+          margin-top: 15px;
+          border: 1px dotted #74b6b9 !important;
+          background: rgba(22, 34, 49, 0.9);
+          span{
+            color: rgb(56, 220, 255);
+          }
+        }
+        .tips {
+          color: #c1c1c1;
+          font-size: 12px;
+          margin-top: 10px;
+        }
+      }
+      .rightForm {
+        margin-left: 2%;
+      }
+    }
+    .textarea {
+      width: 90% !important;
+      @media screen and(max-width: 1024px){
+        width: 97% !important;
+      }
+      :global(.ant-form-item-label.ant-col-sm-7 ){
+        flex: 0 0 12.7%;
+        max-width: 12.7%;
+        @media screen and(max-width: 1024px){
+          flex: 0 0 14.7%;
+          max-width: 14.7%;
+        }
+      }
+      :global(.ant-form-item-control.ant-col-sm-16) {
+        max-width: 85%
+      }
+    }
+
+    :global(.ant-modal-content){
+      background: rgba(22,34,49,0.9) !important;
+      border: 1px dotted #31b9b9;
+      box-shadow: 0px 0px 8px 0px inset #31b9b9;
+    }
+    :global(.ant-modal-header){
+      background: none;
+      border-bottom: 0;
+    }
+    :global(.ant-modal-body){
+      display: flex;
+      padding: 0 50px;
+      position: relative;
+      @media screen and(max-width: 1024px){
+        padding: 0 10px;
+      }
+    }
+    :global(.ant-modal-body .rc-upload){
+      position: absolute;
+      top: -8%;
+      right: 5%;
+    }
+    :global(.ant-modal-body > span > .ant-upload-select){
+      position: absolute;
+      top: 4%;
+      right: 5%;
+      color: #ccc;
+    }
+    :global(.ant-modal-body > span > .ant-upload-list){
+      position: absolute;
+      top: 3%;
+      right: 7%;
+      color: #ccc;
+    }
+    :global(.ant-modal-body > span > .ant-upload-list .ant-upload-text-icon .anticon){
+      color: #ccc;
+    }
+    :global(.ant-modal-title){
+      color: rgba(255,255,255,1);
+    }
+    :global(.ant-modal-footer > div){
+      display: flex;
+      flex-flow: row-reverse;
+    }
+
+    :global(.ant-modal-footer button:first-child){
+      margin-left: 20px;
+    }
+
+    :global(.ant-modal-footer .ant-btn){
+      border: 1px dotted #74b6b9 !important;
+      background: rgba(22, 34, 49, 0.9);
+      color: rgb(56, 220, 255);
+    }
+
+    :global(.ant-modal-footer .ant-btn-primary){
+      display: none;
+    }
+
+    :global(.ant-modal-footer .ant-btn-default){
+      color: rgb(0,0,0);
+      background: rgb(56, 220, 255);
+      border:none;
+    }
+
+    :global(.ant-form) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      height: 90%;
+    }
+
+    :global(.ant-form .ant-form-item) {
+      width: 40%;
+      margin-bottom: 0;
+      margin-top: 4%;
+      margin-right: 10%;
+      @media screen and(max-width: 1366px){
+        width: 45%;
+        margin-right: 5%;
+      }
+      @media screen and(max-width: 1024px){
+        width: 47%;
+        margin-right: 3%;
+      }
+    }
+
+    :global(.ant-form .ant-form-item-control-input-content .ant-input) {
+      border: 1px dotted #74b6b9 !important;
+      background: rgba(22, 34, 49, 0.9);
+      color: #F4F4F4;
+      text-align: center;
+    }
+
+    :global(.ant-form .ant-form-item-control .ant-select .ant-select-selector) {
+      border: 1px dotted #74b6b9 !important;
+      background: rgba(22, 34, 49, 0.9);
+    }
+
+    :global(.ant-form .ant-form-item-control .ant-select .ant-select-selection-item) {
+      color: #F4F4F4;
+      text-align: center;
+    };
+
+    :global(.ant-form .ant-form-item-control .ant-select .ant-select-arrow) {
+      color: #F4F4F4;
+    };
+
+    :global(.ant-form .ant-form-item-label) {
+      white-space: nowrap;
+    }
+
+    :global(.ant-form .ant-form-item-label > label) {
+      color: #F4F4F4;
+      display: inline-block;
+      text-align-last: justify;
+      width: 100% !important;
+      line-height: 32px;
+      position: relative;
+    }
+    :global(.ant-form .ant-col-sm-16) {
+      max-width: none !important;
+    }
+  }
+
+  .editing{
+    :global(.ant-modal-footer .ant-btn-primary){
+      display: inline-block;
+    }
+    :global(.ant-form .ant-form-item-control-input-content .ant-input) {
+      color: rgb(56, 220, 255);
+    }
+
+    :global(.ant-form .ant-form-item-control .ant-select .ant-select-selection-item) {
+      color: rgb(56, 220, 255);
+      text-align: center;
+    };
+  }
+
+  .addWayModal{
+    top: 25% !important;
+    :global(.ant-modal-content){
+      background: rgba(22,34,49,0.9) !important;
+      border: 1px dotted #31b9b9;
+      box-shadow: 0px 0px 8px 0px inset #31b9b9;
+    }
+    :global(.ant-modal-header){
+      background: none;
+      border-bottom: 0;
+    }
+    :global(.ant-modal-body){
+      display: flex;
+      position: relative;
+      padding: 0 50px;
+      height: 150px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    :global(.ant-modal-title){
+      color: rgba(255,255,255,1);
+    }
+    :global(.ant-modal-footer){
+      display: none;
+    }
+
+    .addStudentWay{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      span{
+        color: #cccccc;
+      }
+      button{
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        padding: 0;
+        border-radius: 4px;
+        width: 150px;
+      }
+    }
+
+    .ant-btn{
+      border: 1px dotted #74b6b9 !important;
+      background: rgba(22, 34, 49, 0.9);
+      color: rgb(56, 220, 255);
+    }
+
+    .ant-btn-primary{
+      color: rgb(0,0,0);
+      background: rgb(56, 220, 255);
+      border:none;
+    }
+  }
+
+  .repositoryModal{
+    top: 10% !important;
+    :global(.ant-modal-content){
+      background: rgba(22,34,49,0.9) !important;
+      border: 1px dotted #31b9b9;
+      box-shadow: 0px 0px 8px 0px inset #31b9b9;
+    }
+    :global(.ant-modal-header){
+      background: none;
+      border-bottom: 0;
+    }
+    :global(.ant-modal-body){
+      display: flex;
+      position: relative;
+      padding: 0 50px;
+      height: 500px;
+      flex-direction: column;
+    }
+    :global(.ant-modal-body .ant-table-wrapper){
+      height: 80%;
+      width: 100%;
+    }
+    :global(.ant-modal-title){
+      color: rgba(255,255,255,1);
+    }
+    :global(.ant-modal-footer){
+      padding: 0 50px 20px 50px;
+    }
+    :global(.ant-modal-footer >div){
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    :global(.ant-modal-footer >div .ant-btn){
+      border: 1px dotted #30bbbb;
+      background: rgba(23,38,59,0.9);
+      border-radius: 4px;
+      color: rgb(56,220,255);
+      margin-left: 20px;
+    }
+    :global(.ant-modal-footer >div .ant-btn-primary){
+      border: none;
+      background:  rgb(56,220,255);
+      border-radius: 4px;
+      color: #000;
+    }
+    :global(.ant-form >div:last-child button:first-child){
+      border: 1px dotted #30bbbb;
+      background: rgba(23,38,59,0.9);
+      border-radius: 4px;
+      color: rgb(56,220,255);
+    }
+    :global(.ant-form >div:last-child button:last-child){
+      display: none;
+    }
+    :global(.ant-pagination){
+      display: none;
+    }
+  }
+}
+
+.errModal{
+  .errItem{
+    display: block;
+    color: red;
+  }
+  :global(.ant-modal-content){
+    background: rgba(22,34,49,0.9) !important;
+    border: 1px dotted #31b9b9;
+    box-shadow: 0px 0px 8px 0px inset #31b9b9;
+  }
+  :global(.ant-modal-header){
+    background: none;
+    border-bottom: 0;
+  }
+  :global(.ant-modal-body){
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 250px;
+    overflow: auto;
+    @media screen and(max-width: 1024px){
+      padding: 0 10px;
+    }
+  }
+  :global(.ant-modal-body > span > .ant-upload-select){
+    position: absolute;
+    top: 4%;
+    right: 5%;
+    color: #ccc;
+  }
+  :global(.ant-modal-body > span > .ant-upload-list){
+    position: absolute;
+    top: 3%;
+    right: 7%;
+    color: #ccc;
+  }
+  :global(.ant-modal-title){
+    color: rgba(255,255,255,1);
+  }
+  :global(.ant-modal-footer){
+    display: flex;
+    flex-flow: row-reverse;
+  }
+  :global(.ant-modal-footer Button:last-child){
+    margin-right: 30px;
+  }
+  :global(.ant-modal-footer .ant-btn){
+    border: 1px dotted #74b6b9 !important;
+    background: rgba(22, 34, 49, 0.9);
+    color: rgb(56, 220, 255);
+  }
+
+  :global(.ant-modal-footer .ant-btn-default){
+    color: rgb(0,0,0);
+    background: rgb(56, 220, 255);
+    border:none;
+  }
+}
+
+

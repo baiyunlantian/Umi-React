@@ -1,0 +1,200 @@
+.peopleManagement{
+  margin-top: 10px;
+  height: 93%;
+  color: #fff;
+  .top{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    .analyze{
+      flex: 1;
+      background: rgba(23, 38, 59, 0.9);
+      box-shadow: 0px 3px 4px 1px #000;
+      height: 100%;
+      .content{
+        display: flex;
+        height: calc(100% - 25px);
+        .totalClass{
+          width: 165px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          padding-left: 15px;
+          @media screen and(max-width: 1024px){
+            width: 10%;
+            padding: 0;
+            font-size: 12px;
+          }
+          >div{
+            display: flex;
+            align-items: center;
+            span{
+              font-size: 24px;
+              letter-spacing: 5px;
+              color: rgb(56, 220, 255);
+            }
+          }
+        }
+        .graph{
+          flex: 1;
+          height: 100%;
+          div{
+            height: 100% !important;
+          }
+        }
+        .infoList{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-wrap: wrap;
+          width: 70%;
+          @media screen and(max-width: 1024px){
+            font-size: 12px;
+            width: 65%;
+          }
+          >div:nth-child(1){
+            .colTwo, .colFive, .colEight{
+              color: rgb(53, 206, 240);
+            }
+            .colOne::before{
+              background: rgb(53, 206, 240);
+            }
+          }
+          >div:nth-child(2){
+            .colTwo, .colFive, .colEight{
+              color: rgb(53, 116, 245);
+            }
+            .colOne::before{
+              background: rgb(53, 116, 245);
+            }
+          }
+          >div:nth-child(3){
+            .colTwo, .colFive, .colEight{
+              color: rgb(171, 158, 228);
+            }
+            .colOne::before{
+              background: rgb(171, 158, 228);
+            }
+          }
+          >div:nth-child(4){
+            .colTwo, .colFive, .colEight{
+              color: rgb(91, 240, 154);
+            }
+            .colOne::before{
+              background: rgb(91, 240, 154);
+            }
+          }
+          >div:nth-child(5){
+            .colTwo, .colFive, .colEight{
+              color: rgb(255, 219, 92);
+            }
+            .colOne::before{
+              background: rgb(255, 219, 92);
+            }
+          }
+          >div:nth-child(6){
+            .colTwo, .colFive, .colEight{
+              color: rgb(255, 159, 127);
+            }
+            .colOne::before{
+              background: rgb(255, 159, 127);
+            }
+          }
+          .colOne{position: relative}
+          .colOne::before{
+            content: '';
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            left: -20px;
+            top: 10px;
+            @media screen and(max-width: 1024px){
+              left: -11px;
+              top: 6px;
+            }
+          }
+          .colTwo, .colFive, .colEight{
+            width: 10%;
+            text-align-last: center;
+            letter-spacing: 5px;
+            font-size: 24px;
+            @media screen and(max-width: 1024px){
+              font-size: 20px;
+              letter-spacing: 0px;
+            }
+          }
+          >div{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 45%;
+          }
+        }
+      }
+    }
+  }
+
+  .title{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    @media screen and(max-width: 1366px){
+      font-size: 14px;
+    }
+    @media screen and(max-width: 1024px){
+      font-size: 12px;
+    }
+    .text{
+      position: relative;
+    }
+    .text::before{
+      content: '';
+      width: 3px;
+      height: 80%;
+      position: absolute;
+      left: -7px;
+      top: 4px;
+      background: linear-gradient(to bottom, #0ff, blue);
+    }
+    .time{
+      letter-spacing: 5px;
+      .day{
+        color: #0da6ef;
+      }
+      span{
+        cursor: pointer;
+      }
+    }
+  }
+
+  .addButton{
+    border: 1px dotted #3b7b82 !important;
+    color: rgb(56, 220, 255) !important;
+    background: transparent !important;
+    margin-left: 20px !important;
+    padding: 0;
+    width: 114px;
+    height: 36px;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 36px;
+    font-size: 20px;
+    @media screen and(max-width: 1366px){
+      width: 90px;
+      font-size: 16px;
+    }
+    @media screen and(max-width: 1024px){
+      width: 70px;
+      font-size: 12px;
+    }
+  }
+
+  :global(.ant-form .ant-form-item){
+    margin-right: 5% !important;
+    @media screen and(max-width: 1024px){
+      margin-right: 2% !important;
+    }
+  }
+}

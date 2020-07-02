@@ -1,0 +1,248 @@
+.healthDetail{
+  color: #fff;
+  margin-top: 10px;
+  height: 93%;
+  .top{
+    display: flex;
+    height: 35%;
+    .info{
+      width: 67%;
+      background: rgba(23, 38, 59, 0.9);
+      box-shadow: 0px 3px 4px 1px #000;
+      margin-right: 10px;
+      .content{
+        display: flex;
+        height: calc(100% - 25px);
+        padding: 10px 1% 0 1%;
+        .textarea {
+          width: 62% !important;
+          :global(.ant-form-item-label.ant-col-sm-10 ){
+            flex: 0 0 20.6%;
+            max-width: 20.6%;
+          }
+          :global(.ant-form-item-control.ant-col-sm-14) {
+            max-width: 79.5%;
+          }
+        }
+        .img{
+          width: 170px;
+          height: 190px;
+          border: 1px solid red;
+          @media screen and(max-width: 1024px){
+            width: 130px;
+            height: 150px;
+          }
+          >img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        >div:last-child{
+          flex: 1;
+          padding: 0 5%;
+        }
+        :global(.basic-form){
+          flex: 1;
+          margin-left: 30px;
+        }
+        :global(.ant-form){
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          height: 100%;
+        }
+        :global(.ant-form >div[type='textarea']){
+          width: 100%;
+        }
+        :global(.ant-form >div[type='textarea'] .ant-form-item-control-input){
+          width: 97%;
+        }
+        :global(.ant-form textarea){
+          height: 32px;
+        }
+        :global(.ant-form >div[type='textarea'] .ant-form-item-label){
+          width: 82px !important;
+          flex: none !important;
+        }
+        :global(.ant-form >div[type='textarea'] .ant-col-sm-16){
+          @media screen and(min-width: 576px){
+            max-width: 100%;
+          }
+        }
+        :global(.ant-form .ant-form-item){
+          width: 31%;
+          margin-bottom: 0;
+        }
+        :global(.ant-form .ant-form-item-control-input-content .ant-input){
+          border: 1px dotted #74b6b9 !important;
+          background: rgba(22,34,49,0.9);
+          color: #F4F4F4;
+        }
+        :global(.ant-form .ant-form-item-label){
+          white-space: nowrap;
+        }
+        :global(.ant-form .ant-form-item-label > label){
+          color: #F4F4F4;
+          display: inline-block;
+          text-align-last: justify;
+          width: 60% !important;
+          line-height: 32px;
+          @media screen and(max-width: 1366px){
+            width: 75% !important;
+          }
+          @media screen and(max-width: 1024px){
+            width: 100% !important;
+          }
+        }
+        :global(.ant-form .ant-form-item-label > label[for='teacherMobile']){
+          position: relative;
+          line-height: 16px;
+        }
+        :global(.ant-form .ant-form-item-label > label[for='teacherMobile']::before){
+          position: absolute;
+          content: '(班主任)';
+          top: 14px;
+          left: 10px;
+        }
+      }
+    }
+    .analyze{
+      flex: 1;
+      background: rgba(23, 38, 59, 0.9);
+      box-shadow: 0px 3px 4px 1px #000;
+      position: relative;
+      .goBack{
+        border: 1px dotted #3b7b82;
+        background: transparent;
+        color: rgb(56, 220, 255);
+        position: absolute;
+        right: 0;
+        width: 100px;
+        height: 35px;
+        top: -40px;
+        line-height: 35px;
+        letter-spacing: 10px;
+        padding-left: 10px;
+        border-radius: 4px;
+        box-shadow: 0px 1px 4px 1px #000;
+        text-align: center;
+        cursor: pointer;
+        @media screen and(max-width: 1024px){
+          width: 80px;
+          height: 25px;
+          line-height: 25px;
+        }
+      }
+      .content{
+        display: flex;
+        height: calc(100% - 25px);
+        .des{
+          width: 50%;
+          padding: 0 7%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          height: 100%;
+          @media screen and(max-width: 1024px){
+            font-size: 14px;
+          }
+          .number{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span{
+              color: #34d8e2;
+              font-size: 24px;
+              letter-spacing: 5px;
+            }
+          }
+        }
+        .graph{
+          flex: 1;
+          height: 100%;
+          position: relative;
+          top: 10%;
+          div{
+            height: 100% !important;
+          }
+        }
+      }
+
+
+    }
+  }
+
+  .title{
+    margin: 0 15px;
+    position: relative;
+  }
+  .title::before{
+    content: '';
+    width: 3px;
+    height: 80%;
+    position: absolute;
+    left: -7px;
+    top: 4px;
+    background: linear-gradient(to bottom, #0ff, blue);
+  }
+
+  .bottom{
+    height: calc(100% - 25px - 35%);
+    margin-top: 10px;
+    background: rgba(23, 38, 59, 0.9);
+    box-shadow: 0px 3px 4px 1px #000;
+    .tab{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      position: relative;
+      .text{
+        display: flex;
+        justify-content: space-evenly;
+        .splitLine{
+          margin: 0 20px;
+        }
+        span{
+          color: gray;
+        }
+      }
+      :global(.ant-form){
+        width: 27%;
+        position: absolute;
+        right: -3%;
+        @media screen and(max-width: 1024px){
+          margin-top: 0 !important;
+        }
+        @media screen and(max-width: 1024px){
+          right: 2%;
+        }
+      }
+      :global(.ant-form > div:first-child){
+        display: flex;
+      }
+      :global(.ant-form > div:first-child > div){
+        border: none !important;
+        background: none !important;
+      }
+      :global(.ant-form > div:last-child){
+        display: none !important;
+      }
+      :global(.ant-picker-separator){
+        visibility: hidden !important;
+      }
+      :global(.ant-picker-suffix){
+        display: none !important;
+      }
+      :global(.ant-picker-range .ant-picker-input){
+        position: relative;
+      }
+    }
+    .graph{
+      height: 78%;
+      div{
+        height: 100% !important;
+      }
+    }
+  }
+}

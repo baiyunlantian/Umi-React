@@ -1,0 +1,589 @@
+.peopleManagement{
+  margin-top: 10px;
+  height: 93%;
+  color: #fff;
+  .top{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    .statistics{
+      width: 25%;
+      margin-right: 2%;
+      background: rgba(23, 38, 59, 0.9);
+      box-shadow: 0px 3px 4px 1px #000;
+      .content{
+        display: flex;
+        height: calc(100% - 25px);
+        @media screen and(max-width: 1336px){
+          font-size: 14px;
+        }
+        @media screen and(max-width: 1024px){
+          font-size: 12px;
+        }
+        .info{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          .number{
+            color: rgb(182, 161, 255);
+            letter-spacing: 5px;
+            font-size: 40px;
+            margin: 0 10%;
+            @media screen and(max-width: 1366px){
+              font-size: 24px;
+              letter-spacing: 2px;
+              margin: 0 2%;
+            }
+            @media screen and(max-width: 1024px){
+              font-size: 20px;
+              letter-spacing: 0px;
+              margin: 0;
+            }
+          }
+          >div{
+            display: flex;
+            align-items: center;
+          }
+        }
+        .graph{
+          flex: 1;
+          height: 100%;
+          border: 1px solid green;
+          div{
+            height: 100% !important;
+          }
+        }
+      }
+    }
+    .analyze{
+      flex: 1;
+      background: rgba(23, 38, 59, 0.9);
+      box-shadow: 0px 3px 4px 1px #000;
+      height: 100%;
+      .content{
+        display: flex;
+        height: calc(100% - 25px);
+        .graph{
+          flex: 1;
+          height: 100%;
+          border: 1px solid red;
+          div{
+            height: 100% !important;
+          }
+        }
+        .infoList{
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          @media screen and(max-width: 1024px){
+            font-size: 12px;
+          }
+          .scala{
+            position: relative;
+            .roleName{
+              @media screen and(max-width: 1366px){
+                width: 50px;
+              }
+            }
+            .number{
+              @media screen and(max-width: 1366px){
+                font-size: 20px;
+              }
+            }
+          }
+          .roleName{
+            display: inline-block;
+            width: 80px;
+            text-align-last: justify;
+          }
+          >div{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            @media screen and(max-width: 1366px){
+              font-size: 14px;
+            }
+            >div{
+              width: 100%;
+              @media screen and(max-width: 1024px){
+                font-size: 12px;
+              }
+              .number{
+                letter-spacing: 5px;
+                font-size: 40px;
+                margin: 0 10%;
+                @media screen and(max-width: 1366px){
+                  letter-spacing: 2px;
+                  font-size: 24px;
+                  margin: 0 2%;
+                }
+                @media screen and(max-width: 1024px){
+                  letter-spacing: 0;
+                  font-size: 16px;
+                  margin: 0;
+                }
+              }
+            }
+            >div:first-child{
+              display: flex;
+              align-items: center;
+            }
+          }
+          .info{
+            width: 40%;
+            >div:last-child{
+              .number{
+                font-size: 20px;
+                display: inline-block;
+                width: 65px;
+                text-align-last: center;
+                @media screen and(max-width: 1366px){
+                  width: 60px;
+                }
+                @media screen and(max-width: 1024px){
+                  font-size: 14px;
+                  width: 35px;
+                }
+              }
+            }
+          }
+          >div:nth-child(2)::before{
+            content: '';
+            width: 2px;
+            height: 80%;
+            position: absolute;
+            left: 0;
+            background-image: linear-gradient(to bottom, rgb(20, 60, 82), rgb(2, 236, 239), rgb(20, 60, 82));
+          }
+          >div:nth-child(2)::after{
+            content: '';
+            width: 2px;
+            height: 80%;
+            position: absolute;
+            right: 0;
+            background-image: linear-gradient(to bottom, rgb(20, 60, 82), rgb(13, 126, 139), rgb(20, 60, 82));
+          }
+        }
+      }
+    }
+  }
+
+  .title{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    @media screen and(max-width: 1366px){
+      font-size: 16px;
+    }
+    @media screen and(max-width: 1024px){
+      font-size: 12px;
+    }
+    .text{
+      position: relative;
+    }
+    .text::before{
+      content: '';
+      width: 3px;
+      height: 80%;
+      position: absolute;
+      left: -7px;
+      top: 4px;
+      background: linear-gradient(to bottom, #0ff, blue);
+    }
+  }
+
+  .operation{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    div{
+      font-weight: bold;
+      color: rgb(0, 160, 233);
+      cursor: pointer;
+    }
+  }
+
+  :global(.ant-form button){
+    border: 1px dotted #3b7b82 !important;
+    background: none !important;
+    color: #38dcff !important;
+    margin-left: 20px !important;
+  }
+
+  :global(.ant-form .ant-form-item){
+    margin-right: 5% !important;
+    @media screen and(max-width: 1024px){
+      margin-right: 2% !important;
+    }
+  }
+
+  :global(.ant-table-wrapper .ant-pagination-options){
+    display: none;
+  }
+}
+
+
+.infoModal{
+  position: relative;
+  width: 1000px !important;
+  top: 10%;
+  @media screen and(max-width: 1024px){
+    width: 80% !important;
+  }
+  .editImg{
+    position: absolute;
+    right: 5%;
+    top: -8%;
+  }
+  .masker_layout{
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    z-index: 100;
+  }
+  .textarea {
+    width: 100% !important;
+    :global(.ant-form-item-label.ant-col-sm-6 ){
+      flex: 0 0 11.3%;
+      max-width: 11.3%;
+    }
+    :global(.ant-form-item-control.ant-col-sm-16) {
+      max-width: 85%
+    }
+  }
+  .updateBox{
+    display: flex;
+    .leftUpdate {
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .studentUpload{
+        width: 100%;
+        .Upload {
+          position: relative;
+          width: 250px;
+          height: 250px;
+          border: 0.5px solid #ccc;
+          box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+          border-radius: 4px;
+          overflow: hidden;
+        }
+        .watermark {
+          position: relative;
+          width: 250px;
+          height: 250px;
+          border: 0.5px solid #ccc;
+          box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+          border-radius: 4px;
+          overflow: hidden;
+          @media screen and(max-width: 1024px){
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+          }
+          &:after {
+            background: url(~@/assets/person_picture/vtouch.png) no-repeat center;
+            background-size: contain;
+            opacity: 0.4;
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            content: '';
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+        .btnUpload {
+          width: 180px;
+        }
+      }
+      .guardianUpload{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .guardianItem{
+          flex: 1;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: space-between;
+          .Upload {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border: 0.5px solid #ccc;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            overflow: hidden;
+          }
+          .watermark {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border: 0.5px solid #ccc;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            overflow: hidden;
+            &:after {
+              background: url(~@/assets/person_picture/vtouch.png) no-repeat center;
+              background-size: contain;
+              opacity: 0.4;
+              width: 50%;
+              height: 50%;
+              position: absolute;
+              content: '';
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+          .btnUpload {
+            width: auto;
+          }
+        }
+      }
+      .btnUpload {
+        margin-top: 15px;
+        border: 1px dotted #74b6b9 !important;
+        background: rgba(22, 34, 49, 0.9);
+        span{
+          color: rgb(56, 220, 255);
+        }
+      }
+      .tips {
+        color: #c1c1c1;
+        font-size: 12px;
+        margin-top: 10px;
+      }
+    }
+    .rightForm {
+      margin-left: 2%;
+    }
+    :global(button){
+      color: rgb(55, 215, 250);
+      background: rgba(22, 34, 49, 0.9) !important;
+      border: 1px dotted #31b9b9;
+      margin-left: 8px;
+    }
+  }
+
+  :global(.ant-modal-content){
+    background: rgba(22,34,49,0.9) !important;
+    border: 1px dotted #31b9b9;
+    box-shadow: 0px 0px 8px 0px inset #31b9b9;
+  }
+  :global(.ant-modal-header){
+    background: none;
+    border-bottom: 0;
+  }
+  :global(.ant-modal-body){
+    display: flex;
+    padding: 0 50px;
+    position: relative;
+    @media screen and(max-width: 1024px){
+      padding: 0 10px;
+    }
+  }
+  :global(.ant-modal-body .rc-upload){
+    position: absolute;
+    top: -8%;
+    right: 5%;
+  }
+  :global(.ant-modal-body > span > .ant-upload-select){
+    position: absolute;
+    top: 4%;
+    right: 5%;
+    color: #ccc;
+  }
+  :global(.ant-modal-body > span > .ant-upload-list){
+    position: absolute;
+    top: 3%;
+    right: 7%;
+    color: #ccc;
+  }
+  :global(.ant-modal-body > span > .ant-upload-list .ant-upload-text-icon .anticon){
+    color: #ccc;
+  }
+  :global(.ant-modal-title){
+    color: rgba(255,255,255,1);
+  }
+  :global(.ant-modal-footer > div){
+    display: flex;
+    flex-flow: row-reverse;
+  }
+  :global(.ant-modal-footer Button:last-child){
+    margin-right: 30px;
+  }
+  :global(.ant-modal-footer .ant-btn){
+    border: 1px dotted #74b6b9 !important;
+    background: rgba(22, 34, 49, 0.9);
+    color: rgb(56, 220, 255);
+  }
+
+  :global(.ant-modal-footer .ant-btn-default){
+    color: rgb(0,0,0);
+    background: rgb(56, 220, 255);
+    border:none;
+  }
+
+  :global(.basic-form){
+    flex: 1;
+    margin-left: 30px;
+  }
+  :global(.ant-form){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  :global(.ant-form >div[type='textarea']){
+    width: 100%;
+  }
+  :global(.ant-form >div[type='textarea'] .ant-form-item-control-input){
+    width: 95%;
+  }
+  :global(.ant-form textarea){
+    height: 32px;
+  }
+  :global(.ant-form >div[type='textarea'] .ant-form-item-label){
+    width: 75px !important;
+    flex: none !important;
+  }
+  :global(.ant-form >div[type='textarea'] .ant-col-sm-16){
+    @media screen and(min-width: 576px){
+      max-width: 100%;
+    }
+  }
+  :global(.ant-form .ant-form-item){
+    width: 45%;
+    @media screen and(max-width: 1024px){
+      width: 48%;
+    }
+  }
+  :global(.ant-form .ant-form-item-control-input-content .ant-input){
+    border: 1px dotted #74b6b9 !important;
+    background: rgba(22,34,49,0.9);
+    color: #F4F4F4;
+  }
+  :global(.ant-form .ant-form-item-label){
+    white-space: nowrap;
+  }
+  :global(.ant-form .ant-form-item-label > label){
+    color: #F4F4F4;
+    display: inline-block;
+    text-align-last: justify;
+    width: 100% !important;
+    line-height: 32px;
+    position: relative;
+  }
+  :global(.ant-form .ant-select-selector){
+    background-color: transparent;
+    border: 1px dotted #30bbbb;
+  }
+  :global(.ant-form .ant-select-selection-item){
+    color: #F4F4F4;
+  }
+  :global(.ant-form .ant-select-selection-placeholder){
+    color: #FFF;
+  }
+  :global(.ant-form .ant-select-arrow){
+    color: #FFF;
+  }
+  :global(.ant-form .ant-form-item-label > label[for='parentPhone1']){line-height: 16px;}
+  :global(.ant-form .ant-form-item-label > label[for='parentWeChat1']){line-height: 16px;}
+  :global(.ant-form .ant-form-item-label > label[for='parentPhone2']){line-height: 16px;}
+  :global(.ant-form .ant-form-item-label > label[for='parentWeChat2']){line-height: 16px;}
+
+  :global(.ant-form .ant-form-item-label > label[for='parentPhone1']::after) {
+    position: absolute;
+    top: 13px;
+    content: '(监护人1)';
+  }
+
+  :global(.ant-form .ant-form-item-label > label[for='parentWeChat1']::after) {
+    position: absolute;
+    top: 13px;
+    content: '(监护人1)';
+  }
+
+  :global(.ant-form .ant-form-item-label > label[for='parentPhone2']::after) {
+    position: absolute;
+    top: 13px;
+    content: '(监护人2)';
+  }
+
+  :global(.ant-form .ant-form-item-label > label[for='parentWeChat2']::after) {
+    position: absolute;
+    top: 13px;
+    content: '(监护人2)';
+  }
+
+}
+
+.errModal{
+  .errItem{
+    display: block;
+    color: red;
+  }
+  :global(.ant-modal-content){
+    background: rgba(22,34,49,0.9) !important;
+    border: 1px dotted #31b9b9;
+    box-shadow: 0px 0px 8px 0px inset #31b9b9;
+  }
+  :global(.ant-modal-header){
+    background: none;
+    border-bottom: 0;
+  }
+  :global(.ant-modal-body){
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    position: relative;
+    height: 250px;
+    overflow: auto;
+    @media screen and(max-width: 1024px){
+      padding: 0 10px;
+    }
+  }
+
+  :global(.ant-modal-body > span > .ant-upload-select){
+    position: absolute;
+    top: 4%;
+    right: 5%;
+    color: #ccc;
+  }
+  :global(.ant-modal-body > span > .ant-upload-list){
+    position: absolute;
+    top: 3%;
+    right: 7%;
+    color: #ccc;
+  }
+  :global(.ant-modal-title){
+    color: rgba(255,255,255,1);
+  }
+  :global(.ant-modal-footer){
+    display: flex;
+    flex-flow: row-reverse;
+  }
+  :global(.ant-modal-footer Button:last-child){
+    margin-right: 30px;
+  }
+  :global(.ant-modal-footer .ant-btn){
+    border: 1px dotted #74b6b9 !important;
+    background: rgba(22, 34, 49, 0.9);
+    color: rgb(56, 220, 255);
+  }
+
+  :global(.ant-modal-footer .ant-btn-default){
+    color: rgb(0,0,0);
+    background: rgb(56, 220, 255);
+    border:none;
+  }
+}

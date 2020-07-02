@@ -1,0 +1,268 @@
+.historyQuery{
+  color: #fff;
+  margin-top: 10px;
+  height: 93%;
+
+  :global(.ant-form > div:first-child > div){
+    border: none !important;
+    background: none !important;
+  }
+
+  :global(.ant-form .ant-form-item .ant-form-item-control){
+    max-width: 67.25%;
+  }
+
+  :global(.ant-form .ant-form-item:last-child){
+    border: 1px dotted #30bbbb !important;
+    border-radius: 4px;
+    height: 36px;
+    @media screen and(max-width: 1024px){
+      height: 32px;
+    }
+  }
+
+  :global(.ant-form button[type='submit']){
+    font-size: 16px !important;
+    height: 35px !important;
+    @media screen and(max-width: 1024px){
+      font-size: 14px !important;
+      width: 70px;
+    }
+  }
+
+  .goBack{
+    border: 1px dotted #3b7b82;
+    background: transparent;
+    color: rgb(56, 220, 255);
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    letter-spacing: 5px;
+    font-size: 16px;
+    padding-left: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 4px 1px #000;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 10px;
+    @media screen and(max-width: 1024px){
+      width: 70px;
+      font-size: 14px;
+      letter-spacing: 0;
+      padding: 0;
+    }
+  }
+
+  .title {
+    margin: 0 15px;
+    position: relative;
+    font-size: 20px;
+    @media screen and(max-width: 1024px){
+      font-size: 14px;
+    }
+  }
+
+  .title::before {
+    content: '';
+    width: 3px;
+    height: 80%;
+    position: absolute;
+    left: -7px;
+    top: 4px;
+    background: linear-gradient(to bottom, #0ff, blue);
+  }
+
+  .classInfoTop{
+    height: 25%;
+  }
+  .buildingTop{
+    height: 20%;
+  }
+  .classInfoTop, .buildingTop{
+    display: flex;
+    margin-bottom: 20px;
+    @media screen and(max-width: 1366px){
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    @media screen and(max-width: 1024px){
+      margin-bottom: 10px;
+    }
+    .info{
+      width: 35%;
+      background: rgba(23, 38, 59, 0.9);
+      box-shadow: 0px 3px 4px 1px #000;
+      margin-right: 20px;
+      height: 100%;
+      @media screen and(max-width: 1366px){
+        width: 45%;
+        margin-right: 10px;
+      }
+      .content{
+        display: flex;
+        height: calc(100% - 30px);
+        @media screen and(max-width: 1024px){
+          font-size: 12px;
+        }
+        .classLeft{
+          padding-left: 15px;
+          width: 45%;
+          .item{
+            display: flex;
+            align-items: flex-end;
+            border-bottom: 1px dotted rgb(50, 196, 230);
+            margin-bottom: 10px;
+            @media screen and(max-width: 1024px){
+              margin-bottom: 0px;
+            }
+            >div:first-child{
+              position: relative;
+              bottom: -6px;
+              font-size: 16px;
+            }
+          }
+        }
+        .buildingLeft{
+          padding-left: 15px;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          .item{
+            border-bottom: 1px dotted rgb(50, 196, 230);
+            margin-bottom: 10px;
+            margin-right: 10%;
+          }
+        }
+        .BlueColor{
+          color:rgb(50, 196, 230);
+          font-size: 18px;
+          position: relative;
+          bottom: -3px;
+          @media screen and(max-width: 1024px){
+            font-size: 14px;
+          }
+        }
+        .graph{
+          flex:1;
+          height: 100%;
+          div{
+            height: 100% !important;
+          }
+        }
+      }
+    }
+    .statistics{
+      flex: 1;
+      background: rgba(23, 38, 59, 0.9);
+      box-shadow: 0px 3px 4px 1px #000;
+      .classInfoContent{
+        display: flex;
+        height: calc(100% - 30px);
+        display: flex;
+        justify-content: space-evenly;
+        padding-left: 20px;
+        .left{
+          width: 20%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          @media screen and(max-width: 1366px){
+            width: 30%;
+          }
+          @media screen and(max-width: 1024px){
+            font-size: 12px;
+          }
+          .item{
+            display: flex;
+            align-items: center;
+            .text{
+              width: 60%;
+              text-align-last: justify;
+            }
+            span{
+              color:rgb(50, 196, 230);
+              font-size: 24px;
+              letter-spacing: 5px;
+              margin: 0 5%;
+              @media screen and(max-width: 1366px){
+                font-size: 20px;
+                letter-spacing: 2px;
+                margin: 0;
+              }
+              @media screen and(max-width: 1024px){
+                font-size: 14px;
+                letter-spacing: 0px;
+                margin: 0;
+              }
+            }
+          }
+          .graph{
+            flex: 1;
+            height: 100%;
+            div{
+              height: 100% !important;
+            }
+          }
+        }
+        .graphList{
+          display: flex;
+          justify-content: center;
+          flex: 1;
+          height: 100%;
+          >div{
+            width: 25%;
+            .graph{
+              height: 90%;
+              div{
+                height: 100% !important;
+              }
+            }
+            .graphDes{
+              text-align: center;
+              position: relative;
+              top: -25px;
+            }
+          }
+        }
+      }
+      .buildingContent{
+        display: flex;
+        height: calc(100% - 30px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 2%;
+        @media screen and(max-width: 1024px){
+          font-size: 14px;
+        }
+        .item{
+          flex: 1;
+          text-align: center;
+          .text{
+            display: flex;
+            align-items: center;
+            span{
+              font-size: 30px;
+              letter-spacing: 5px;
+              min-width: 100px;
+              display: inline-block;
+              text-align: center;
+              @media screen and(max-width: 1366px){
+                font-size: 20px;
+                letter-spacing: 2px;
+                min-width: 60px;
+              }
+              @media screen and(max-width: 1024px){
+                font-size: 16px;
+                letter-spacing: 0px;
+                min-width: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

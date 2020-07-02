@@ -1,0 +1,89 @@
+.exceptionItem{
+  width: 24%;
+  max-width: 440px;
+  max-height: 220px;
+  margin-bottom: 10px;
+  margin-right: 1%;
+  color: #dedede;
+  background: rgba(23, 38, 59, 0.9);
+  box-shadow: 0px 2px 4px 0px #000;
+  position: relative;
+  @media screen and (max-width: 1024px){
+    width: 32%;
+  }
+  .operationImg{
+    width: 20%;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .itemInfo{
+    display: flex;
+    height: 100%;
+    padding: 5% 0 5% 3%;
+    .left{
+      width: 25%;
+      min-width: 80px;
+      .img{
+        width: 100%;
+        height: 80%;
+        border: 1px solid green;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .name{
+        height: 20%;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+    .right{
+      flex: 1;
+      min-width: 60%;
+      margin: 0 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media screen and(max-width: 1366px){
+        margin: 0 0 0 5%;
+      }
+      @media screen and(max-width: 1024px){
+        font-size: 12px;
+      }
+      .heat{
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 1024px){
+          padding-right: 2px;
+        }
+        .redColor{
+          color: red;
+        }
+        .greenColor{
+          color: #00e48a;
+        }
+      }
+      >div{
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+    span{
+      color: #f9f9f9;
+      letter-spacing: 1px;
+    }
+  }
+}

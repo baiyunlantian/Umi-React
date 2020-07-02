@@ -1,0 +1,199 @@
+.page-basic {
+  height: 100vh;
+
+  // 定义一个字体颜色渐变
+  .linearFont {
+    background: -webkit-linear-gradient(rgb(70, 243, 252), rgb(33, 141, 236), rgb(9, 58, 209));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  .header-area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 12%;
+    position: relative;
+    z-index: 100;
+    .top{
+      display: flex;
+      justify-content: space-between;
+      width: 88vw;
+      height: 7.5vh;
+      .left {
+        display: flex;
+        width: 33%;
+        &>img{
+          width: 100%;
+          height: 100%;
+        }
+
+        .font-logo {
+          font-family: "font-logo";
+          font-size: .45rem;
+          text-shadow: 3px 3px 2px black;
+          // .linearFont
+        }
+
+        .header-title {
+          position: relative;
+          top: 20%;
+          color: white;
+          font-family: "font-logo";
+          font-size: .3rem;
+          text-shadow: 3px 3px 2px black;
+        }
+      }
+      .logoImg {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 65%;
+        .active{
+          background: -webkit-linear-gradient(to bottom, #66ffff, #0033cc);
+          background: -o-linear-gradient(to bottom, #66ffff, #0033cc);
+          background: -moz-linear-gradient(to bottom, #66ffff, #0033cc);
+          background: linear-gradient(to bottom, #66ffff, #0033cc);
+          -webkit-background-clip: text;
+          color: transparent;
+          position: relative;
+          font-size: 22px;
+          font-weight: bold;
+          @media screen and(max-width: 1366px){
+            font-size: 20px;
+          }
+          @media screen and(max-width: 1024px){
+            font-size: 16px;
+          }
+        }
+
+        .active:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          top: 30px;
+          left: 0px;
+          height: 2px;
+          box-shadow: 0px 0px 10px 2px rgb(52,61,71);
+          background: linear-gradient(to right,rgba(52, 61, 71, 0.1), rgba(255,255,255, 0.6),rgba(52, 61, 71, 0.1));
+          @media screen and(max-width: 1366px){
+            top: 28px;
+          }
+          @media screen and(max-width: 1024px){
+            top: 23px;
+          }
+        }
+        div,a{
+          width: auto;
+          text-align: center;
+          padding: 0 0.1rem;
+          color: #dedede;
+          font-size: 18px;
+          @media screen and(max-width: 1366px){
+            font-size: 14px;
+          }
+          @media screen and(max-width: 1024px){
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .admin-center {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-basis: 10%;
+      margin: auto 0;
+      border-radius: 90px;
+      background: black;
+      color: white;
+      position: absolute;
+      top: 10%;
+      right: 1%;
+      width: 10vw;
+      height: 5vh;
+      .user-role {
+        border-bottom: 0.01rem solid white;
+        @media screen and(max-width: 1024px){
+          font-size: 12px;
+        }
+      }
+    }
+    .headerTime {
+      width: 100%;
+      height: 5vh;
+      color: #e6e6e6;
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
+      border-top: 0.02rem solid;
+      border-image: linear-gradient(to right, rgb(31, 44, 107), rgb(35, 77, 86), rgb(31, 44, 107)) 30 30;
+      @media screen and(max-width: 1024px){
+        padding: 0 20px;
+      }
+
+      .colOne {
+        text-align: right;
+
+        div:first-child {
+          font-size: 16px;
+          height: 20px;
+          @media screen and(max-width: 1024px){
+            font-size: 14px;
+            height: 16px;
+          }
+        }
+
+        div:last-child {
+          font-size: 12px;
+        }
+      }
+
+      .colTwo {
+        font-size: 14px;
+        width: 14px;
+        height: 28px;
+        line-height: 16px;
+        margin: 0 5px;
+        @media screen and(max-width: 1024px){
+          font-size: 12px;
+          width: 12px;
+          height: 27px;
+          line-height: 14px;
+          margin: 0 2px;
+        }
+      }
+
+      .colThree {
+        font-size: 24px;
+        @media screen and(max-width: 1366px){
+          font-size: 20px;
+        }
+        @media screen and(max-width: 1024px){
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.normal {
+  font-family: Georgia, sans-serif;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: normal;
+  letter-spacing: -1px;
+  background: darkslateblue;
+  padding: .6em 0;
+  color: white;
+  margin: 0;
+}

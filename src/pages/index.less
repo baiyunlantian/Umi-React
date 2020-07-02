@@ -1,0 +1,309 @@
+ .infoLeft, .infoRight{
+    width: 19%;
+    height: 85%;
+    color: #ffffff;
+   position: absolute;
+    .peopleCount, .attendance{
+      width: 100%;
+      margin-top: 10px;
+      height: 46%;
+        .totalPeople,.increase {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .text {
+            font-size: 14px;
+          }
+          .number {
+            font-size: 24px;
+            letter-spacing: 5px;
+            @media screen and(max-width: 1024px){
+              font-size: 20px;
+              letter-spacing: 2px;
+            }
+          }
+        }
+        .increase {
+          .number {
+            color: #00ff66;
+          }
+        }
+      .graph{
+        height: 65%;
+        background-color: #17405b;
+        box-shadow: 6px 2px 6px 0px rgba(19, 31, 45, 0.72);
+        opacity: 0.79;
+        div{
+          height: 100% !important;
+        }
+      }
+    }
+    .animalHeat, .visitor{
+      margin-top: 25px;
+      @media screen and(max-width: 1366px){
+        margin-top: 0px;
+      }
+      .totalPeople{
+        width: 100%;
+        .number{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          span{
+            text-align: center;
+            margin-right: 10px;
+            width: 30px;
+            height: 32px;
+            background: -webkit-linear-gradient(90deg,rgba(35, 180, 255, 0.06) 0%, #23b4ff 53%,rgba(35, 180, 255, 0.53) 77%,rgba(35, 180, 255, 0.06) 100%); /* Safari 5.1-6.0 */
+            background: -o-linear-gradient(90deg,rgba(35, 180, 255, 0.06) 0%, #23b4ff 53%,rgba(35, 180, 255, 0.53) 77%,rgba(35, 180, 255, 0.06) 100%); /* Opera 11.1-12.0 */
+            background: -moz-linear-gradient(90deg,rgba(35, 180, 255, 0.06) 0%, #23b4ff 53%,rgba(35, 180, 255, 0.53) 77%,rgba(35, 180, 255, 0.06) 100%); /* Firefox 3.6-15 */
+            background: linear-gradient(90deg,rgba(35, 180, 255, 0.06) 0%, #23b4ff 53%,rgba(35, 180, 255, 0.53) 77%,rgba(35, 180, 255, 0.06) 100%);
+          }
+        }
+      }
+      .graph{
+        height: 210px;
+        background-color: #17405b;
+        box-shadow: 6px 2px 6px 0px rgba(19, 31, 45, 0.72);
+        opacity: 0.79;
+        div{
+          height: 100% !important;
+        }
+      }
+      .heatBottom{
+        display: flex;
+        margin-top: 10px;
+        >div{
+          width: 50%;
+          height: 54px;
+          >div:first-child{
+            font-size: 12px;
+            padding-left: 10px;
+          }
+          >div:last-child{
+            text-align: center;
+            font-size: 18px;
+            @media screen and(max-width: 1024px){
+              font-size: 14px;
+            }
+          }
+        }
+        .normalHeat{
+          background: -webkit-linear-gradient(to right, transparent, #1c77a0);
+          background: -o-linear-gradient(to right, transparent, #1c77a0);
+          background: -moz-linear-gradient(to right, transparent, #1c77a0);
+          background: linear-gradient(to right, transparent, #1c77a0);
+          span{
+            color: #00afff;
+          }
+        }
+        .exceptionHeat{
+          background: -webkit-linear-gradient(to right, #a40000 , transparent);
+          background: -o-linear-gradient(to right, #a40000 , transparent);
+          background: -moz-linear-gradient(to right, #a40000 , transparent);
+          background: linear-gradient(to right, #a40000 , transparent);
+          span{
+            color: #f00;
+          }
+        }
+      }
+    }
+    .title{
+      border-bottom: 1px solid #777;
+      display: flex;
+      align-items: flex-end;
+      .titleLeft{
+        font-size: 18px;
+        padding-left: 5px;
+        @media screen and(max-width: 1024px){
+          font-size: 12px;
+        }
+      }
+      .titleRight{
+        font-size: 12px;
+        display: flex;
+        justify-content: flex-end;
+        flex: 1;
+      }
+    }
+    .description {
+      height: 20%;
+      box-shadow: 6px 2px 6px 0px rgba(19, 31, 45, 0.72);
+      border-radius: 2px;
+      opacity: 0.79;
+      display: flex;
+      margin: 3% 0 2% 0;
+      padding-left: 10px;
+      background: -webkit-linear-gradient(to right, #1c77a0, transparent); /* Safari 5.1-6.0 */
+      background: -o-linear-gradient(to right, #1c77a0, transparent); /* Opera 11.1-12.0 */
+      background: -moz-linear-gradient(to right, #1c77a0, transparent); /* Firefox 3.6-15 */
+      background: linear-gradient(to right, #1c77a0, transparent);
+      border-left: 5px solid #00a0e9;
+    }
+
+   .peopleCount{
+     .text{
+       text-align: center;
+       .number{
+         margin: 0 5px;
+       }
+     }
+   }
+
+    .attendance {
+      .totalPeople{
+        height: 45%;
+        width: 100%;
+        .number{
+          font-size: 14px;
+          text-align: center;
+        }
+        .text{
+          font-size: 12px;
+        }
+        span{
+          font-size: 24px;
+          letter-spacing: 5px;
+          margin: 0 15px;
+          color: #30ffb8;
+          @media screen and(max-width: 1366px){
+            font-size: 22px;
+            letter-spacing: 2px;
+          }
+          @media screen and(max-width: 1024px){
+            font-size: 16px;
+          }
+        }
+      }
+      .description{
+        height: 29%;
+        display: flex;
+        flex-direction: column;
+        >div:last-child{
+          width: 100%;
+          height: 55%;
+          display: flex;
+          .hadAttendance, .notAttendance{
+            width: 50%;
+            position: relative;
+            .text{
+              font-size: 12px;
+              padding-left: 30px;
+              @media screen and(max-width: 1024px){
+                padding-left: 0px;
+              }
+            }
+            .number{
+              text-align: center;
+              letter-spacing: 5px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              @media screen and(max-width: 1024px){
+                letter-spacing: 0px;
+              }
+            }
+            div{
+              font-size: 16px;
+              @media screen and (max-width: 1024px){
+                font-size: 14px;
+              }
+            }
+          }
+          .hadAttendance::after{
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 41px;
+            right: 0;
+            top: 5px;
+            background: linear-gradient(180deg, #00afff 0%, #113a52 100%);
+          }
+          .hadAttendance {
+            span{
+              color: #63f9fe;
+              font-size: 24px;
+              @media screen and (max-width: 1366px){
+                font-size: 22px;
+              }
+              @media screen and (max-width: 1366px){
+                font-size: 20px;
+              }
+            }
+          }
+          .notAttendance {
+            span{
+              color: #ff9d45;
+              font-size: 24px;
+              @media screen and (max-width: 1366px){
+                font-size: 22px;
+              }
+              @media screen and (max-width: 1366px){
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+      .graph{
+        height: 54%;
+      }
+    }
+
+    .visitor{
+      height: 48%;
+      .title{
+        margin-bottom: 3%;
+      }
+      .graph{
+        height: 45%;
+        position: relative;
+        .whitePoint{
+          position: absolute;
+          top: 17%;
+          right: 29%;
+          width: 10px;
+          height: 10px !important;
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 0.9);
+          z-index: 1000;
+          box-shadow: 0px 1px 10px 1px #fff;
+          @media screen and(max-width: 1366px){
+            top: 22%;
+          }
+          @media screen and(max-width: 1024px){
+            top: 17%;
+          }
+        }
+      }
+      >div:nth-child(2){
+        border-bottom: 1px dotted #999;
+      }
+    }
+    .animalHeat{
+      height: 49%;
+      .description{
+        height: 17%;
+        .text{
+          height: 50%;
+        }
+        .number{
+          height: 45%;
+          span{
+            height: 100%;
+            @media screen and (max-height : 768px){
+              line-height: 100%;
+            }
+          }
+        }
+      }
+      .graph{height: 54%;}
+      .heatBottom{
+        height: 13%;
+        >div{
+          height: 100%;
+        }
+      }
+    }
+  }

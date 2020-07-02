@@ -1,0 +1,300 @@
+.attendanceDetail {
+  margin-top: 10px;
+  height: 93%;
+  color: #fff;
+
+  .top {
+    display: flex;
+    height: 35%;
+    margin-bottom: 20px;
+
+    .info {
+      width: 60%;
+      background: rgba(23, 38, 59, 0.9);
+      box-shadow: 0px 3px 4px 1px #000;
+      margin-right: 10px;
+
+      .content {
+        display: flex;
+        height: calc(100% - 25px);
+        padding: 10px 1% 0 1%;
+
+        .img {
+          width: 170px;
+          height: 190px;
+          border: 1px solid red;
+          @media screen and(max-width: 1366px){
+            width: 120px;
+            height: 140px;
+          }
+          @media screen and(max-width: 1024px){
+            width: 70px;
+            height: 90px;
+          }
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        >div:last-child{
+          flex: 1;
+          padding: 0 5%;
+          @media screen and(max-width: 1366px){
+            padding: 0 1%;
+          }
+        }
+
+        :global(.basic-form) {
+          flex: 1;
+          margin-left: 30px;
+        }
+
+        :global(.ant-form) {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          height: 90%;
+        }
+
+        :global(.ant-form .ant-form-item.textarea) {
+          width: 100% !important;
+        }
+
+        :global(.ant-form .ant-form-item.textarea .ant-form-item-label.ant-col-sm-6) {
+          flex: 0 0 7.6%;
+          max-width: 7.6%;
+        }
+
+        :global(.ant-form .ant-form-item.textarea .ant-form-item-control.ant-col-sm-16) {
+          max-width: 88.5%;
+        }
+
+        :global(.ant-form .ant-form-item) {
+          width: 33%;
+          margin-bottom: 0;
+        }
+
+        :global(.ant-form .ant-form-item-control-input-content .ant-input) {
+          border: 1px dotted #74b6b9 !important;
+          background: rgba(22, 34, 49, 0.9);
+          color: #F4F4F4;
+        }
+
+        :global(.ant-form .ant-form-item-label) {
+          white-space: nowrap;
+        }
+
+        :global(.ant-form .ant-form-item-label > label) {
+          color: #F4F4F4;
+          display: inline-block;
+          text-align-last: justify;
+          width: 100% !important;
+          line-height: 32px;
+          position: relative;
+          @media screen and(max-width: 1366px){
+            font-size: 12px;
+          }
+          @media screen and(max-width: 1024px){
+            font-size: 12px;
+          }
+        }
+
+        :global(.ant-form .ant-form-item-label > label[for='teacherPhone']){line-height: 16px;}
+        :global(.ant-form .ant-form-item-label > label[for='parentPhone1']){line-height: 16px;}
+
+        :global(.ant-form .ant-form-item-label > label[for='teacherPhone']::before) {
+          position: absolute;
+          top: 13px;
+          content: '(班主任)';
+        }
+
+        :global(.ant-form .ant-form-item-label > label[for='parentPhone1']::before) {
+           position: absolute;
+           top: 13px;
+           content: '(监护人1)';
+         }
+      }
+    }
+
+    .analyze {
+      flex: 1;
+      background: rgba(23, 38, 59, 0.9);
+      box-shadow: 0px 3px 4px 1px #000;
+      position: relative;
+
+      .button{
+        position: absolute;
+        right: 0;
+        top: -45px;
+        display: flex;
+        background: none;
+        box-shadow: none;
+        .goBack{
+          border: 1px dotted #3b7b82;
+          background: transparent;
+          color: rgb(56, 220, 255);
+          width: 100px;
+          height: 35px;
+          line-height: 35px;
+          letter-spacing: 5px;
+          padding-left: 10px;
+          border-radius: 4px;
+          box-shadow: 0px 1px 4px 1px #000;
+          text-align: center;
+          cursor: pointer;
+          @media screen and(max-width: 1024px){
+            letter-spacing: 2px;
+            width: 80px;
+            height: 25px;
+            line-height: 25px;
+            font-size: 12px;
+            margin-top: 8px;
+          }
+        }
+      }
+
+      .content {
+        display: flex;
+        height: calc(100% - 25px);
+
+        .des {
+          width: 70%;
+          padding: 0 3%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          height: 100%;
+        }
+        .row{
+          display: flex;
+          justify-content: space-between;
+          .item{
+            height: 70px;
+            width: 20%;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .day{
+              display: flex;
+              align-items: center;
+            }
+            span{
+              font-size: 24px;
+              letter-spacing: 5px;
+            }
+          }
+          .blueColor{color: rgb(52, 202, 235);}
+          .greenColor{color: rgb(29, 246, 122);}
+          .brownColor{color: rgb(216, 141, 36)}
+          .redColor{color: rgb(255, 0, 0)}
+          .pinkColor{color: rgb(243, 2, 230)}
+        }
+        .graph {
+          flex: 1;
+          height: 100%;
+          div {
+            height: 100% !important;
+          }
+        }
+      }
+
+
+    }
+  }
+
+  .title {
+    margin: 0 15px;
+    position: relative;
+  }
+
+  .title::before {
+    content: '';
+    width: 3px;
+    height: 80%;
+    position: absolute;
+    left: -7px;
+    top: 4px;
+    background: linear-gradient(to bottom, #0ff, blue);
+  }
+}
+
+.infoModal{
+  position: relative;
+  width: 1000px !important;
+  top: 10%;
+  @media screen and(max-width: 1024px){
+    width: 80% !important;
+  }
+  :global(.ant-modal-content){
+    background: rgba(22,34,49,0.9) !important;
+    border: 1px dotted #31b9b9;
+    box-shadow: 0px 0px 8px 0px inset #31b9b9;
+  }
+  :global(.ant-modal-header){
+    background: none;
+    border-bottom: 0;
+  }
+  :global(.ant-modal-body){
+    display: flex;
+    position: relative;
+  }
+  :global(.ant-modal-body > div){
+    width: 100%;
+  }
+  :global(.ant-modal-title){
+    color: rgba(255,255,255,0.65);
+  }
+  :global(.ant-modal-footer){
+    display: flex;
+    justify-content: flex-end;
+  }
+  :global(.ant-modal-footer > div){
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 35px;
+  }
+  :global(.ant-modal-footer > div >button:first-child){
+    border: 1px dotted #3b7b82;
+    background: transparent;
+    color: #5eddea;
+  }
+  :global(.ant-modal-footer > div >button:last-child){
+    background: #35d7ff;
+    color: #282d2d;
+    border: none;
+    margin-right: 35px;
+  }
+
+  :global(.basic-form){
+    flex: 1;
+    margin-left: 30px;
+  }
+  :global(.ant-form){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  :global(.ant-form .ant-form-item){
+    width: 48%;
+  }
+  :global(.ant-form .ant-form-item:last-child .ant-form-item-control-input){
+    width: 60%;
+  }
+  :global(.ant-form .ant-form-item-control-input-content .ant-input){
+    border: 1px dotted #74b6b9 !important;
+    background: rgba(22,34,49,0.9);
+    color: #F4F4F4;
+  }
+  :global(.ant-form .ant-form-item-label){
+    white-space: nowrap;
+  }
+  :global(.ant-form .ant-form-item-label > label){
+    color: #F4F4F4;
+    display: inline-block;
+    text-align-last: justify;
+    width: 100% !important;
+    line-height: 32px;
+  }
+}

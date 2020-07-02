@@ -1,0 +1,439 @@
+.schedulePage{
+  margin-top: 10px;
+  height: 93%;
+  color: #f1f1f1;
+  position: relative;
+  .goBack{
+    border: 1px dotted #3b7b82;
+    background: transparent;
+    color: rgb(56, 220, 255);
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    letter-spacing: 5px;
+    padding-left: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 4px 1px #000;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: -43px;
+    @media screen and(max-width: 1024px){
+      width: 80px;
+      height: 25px;
+      line-height: 25px;
+    }
+  }
+  .scheduleContainer{
+    height: 38%;
+    .calendarList{
+      width: 95%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .calendarItem{
+        border-top: 1px dashed #9a9a9a;
+        border-radius: 2px;
+        width: 177px;
+        span{
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          text-align: center;
+          @media screen and(max-width: 1366px){
+            width: 24px;
+          }
+          @media screen and(max-width: 1024px){
+            font-size: 12px;
+            width: 18px;
+            height: 20px;
+          }
+        }
+        .tableTile{
+          color: #a7a7a7;
+        }
+        .thead{
+          background: rgb(63, 75, 91);
+          color: #f1f1f1;
+          margin-right: 2px;
+          @media screen and(max-width: 1366px){
+            margin-right: 4px;
+          }
+        }
+        .tbody{
+          height: auto;
+          //已完成
+          .dateState0{
+            background: rgb(15, 80, 62);
+          }
+          //已安排
+          .dateState1{
+            background: rgb(26, 77, 114);
+          }
+          //未安排
+          .dateState2{
+            background: transparent;
+          }
+          .dateState2:hover{
+            border: 1px solid rgb(35, 179, 254);
+          }
+          //当前
+          .dateState3{
+            background: rgb(35, 179, 254);
+          }
+          span{
+            float: left;
+            border: 1px solid #456273;
+          }
+        }
+      }
+    }
+    .legend{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 95%;
+      margin: 0 auto;
+      @media screen and(max-width: 1024px){
+        font-size: 12px;
+      }
+      >div:nth-child(2){
+        width: 70%;
+        text-align: center;
+        span{
+          position: relative;
+          margin: 0 15px;
+        }
+        span::before{
+          content: '';
+          position: absolute;
+          left: -15px;
+          top: 7px;
+          width: 10px;
+          height: 10px;
+          @media screen and(max-width: 1024px){
+            top: 4px;
+          }
+        }
+        span:nth-child(1)::before{
+          background: rgb(8, 114, 66);
+        }
+        span:nth-child(2)::before{
+          background: rgb(28, 98, 142);
+        }
+        span:nth-child(3)::before{
+          border: 1px solid rgb(35, 179, 254);
+        }
+        span:nth-child(4)::before{
+          background: rgb(35, 179, 254);
+        }
+      }
+    }
+    .operationDiv{
+      >img{
+        @media screen and(max-width: 1024px){
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+  .personInfoContainer{
+    height: 30%;
+    margin: 15px 0;
+    .operationDiv{
+      width: 100px;
+      height: 40px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      span{
+        cursor:pointer;
+        font-size: 24px;
+        color: rgb(56, 220, 255);
+      }
+    }
+    .customForm{
+      width: auto;
+      display: flex;
+      align-items: center;
+      padding: 0 5%;
+      .dateController{
+        display: flex;
+        align-items: center;
+        .dateInput{
+          display: inline-block;
+          border: 1px dotted #30bbbb;
+          border-radius: 4px;
+          width: 150px;
+          height: 35px;
+          line-height: 35px;
+          text-align: center;
+          margin-left: 15px;
+        }
+        span{
+          width: 32px;
+        }
+      }
+      >div:last-child{
+        width: 80%;
+        :global(.ant-form >div:last-child .ant-form-item-control){
+          width: 150px !important;
+          flex: none !important;
+        }
+        :global(.ant-form-item-label > label){
+          color: #f1f1f1;
+        }
+        :global(.ant-form-item-control .ant-select-selector){
+          border: 1px dotted #30bbbb;
+          background: transparent;
+        }
+        :global(.ant-form-item-control .ant-select-selection-placeholder){
+          color: #f1f1f1;
+        }
+        :global(.ant-form-item-control .ant-select-selection-item){
+          color: #f1f1f1;
+        }
+        :global(.ant-form-item-control .ant-select-selector input){
+          color: #f1f1f1;
+        }
+        :global(.ant-select-multiple .ant-select-selection-item-content){
+          color: #000;
+        }
+      }
+    }
+  }
+  .dormitoryContainer{
+    height: 29%;
+    .buildingList{
+      display: flex;
+      align-items: center;
+      height: calc(100% - 107px);
+      .buildingItem{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+          width: 50px;
+          height: 50px;
+        }
+      }
+      >div{
+        margin: 0 20px;
+      }
+      >div:last-child{
+        width: 40px;
+        height: 40px;
+        font-size: 50px;
+        text-align: center;
+        line-height: 30px;
+        color: #38dcff;
+        border: 1px dotted #3b7b82;
+        border-radius: 4px;
+      }
+    }
+    .buildingFormContainer{
+      width: 50%;
+      background: rgba(22, 34, 49, 0.9) !important;
+      border: 1px dotted #31b9b9;
+      box-shadow: 0px 0px 8px 0px inset #31b9b9;
+      @media screen and(max-width: 1366px){
+        width: 70%;
+      }
+      @media screen and(max-width: 1024px){
+        width: 93%;
+      }
+      .operationDiv{
+        width: 100px;
+        height: 40px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        float: right;
+        span{
+          font-size: 24px;
+          color: rgb(56, 220, 255);
+        }
+      }
+      :global(.ant-form ){
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 80px;
+      }
+      :global(.ant-form .ant-form-item){
+        margin: 0;
+      }
+      :global(.ant-form .ant-form-item-control-input-content .ant-input){
+        border: 1px dotted #74b6b9 !important;
+        background: rgba(22,34,49,0.9);
+        color: rgb(56, 220, 255);
+      }
+      :global(.ant-form .ant-form-item-label){
+        white-space: nowrap;
+      }
+      :global(.ant-form .ant-form-item-label > label){
+        color: #F4F4F4;
+        display: inline-block;
+        text-align-last: justify;
+        width: 100% !important;
+        line-height: 32px;
+      }
+      :global(.ant-form-item-label > label){
+        color: #f1f1f1;
+      }
+      :global(.ant-form-item-control .ant-select-selector){
+        border: 1px dotted #30bbbb;
+        background: transparent;
+      }
+      :global(.ant-form-item-control .ant-select-selection-placeholder){
+        color: #f1f1f1;
+      }
+      :global(.ant-form-item-control .ant-select-selection-item){
+        color: #f1f1f1;
+      }
+      :global(.ant-form-item-control .ant-select-selector input){
+        color: #f1f1f1;
+      }
+    }
+  }
+  >div{
+    background: rgba(23, 38, 59, 0.9);
+    box-shadow: 0px 3px 4px 1px #000;
+  }
+  .title{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    .text{
+      position: relative;
+    }
+    .text::before{
+      content: '';
+      width: 3px;
+      height: 80%;
+      position: absolute;
+      left: -7px;
+      top: 4px;
+      background: linear-gradient(to bottom, #0ff, blue);
+      @media screen and(max-width: 1024px){
+        height: 20px;
+      }
+    }
+  }
+}
+
+.scheduleModal{
+  position: relative;
+  top: 30%;
+
+  :global(.ant-modal-content){
+    background: rgba(22,34,49,0.9) !important;
+    border: 1px dotted #31b9b9;
+    box-shadow: 0px 0px 8px 0px inset #31b9b9;
+  }
+  :global(.ant-modal-header){
+    background: none;
+    border-bottom: 0;
+  }
+  :global(.ant-modal-body){
+    display: flex;
+    position: relative;
+  }
+  :global(.ant-modal-body > div){
+    width: 100%;
+  }
+  :global(.ant-modal-title){
+    color: rgba(255,255,255,0.65);
+  }
+  :global(.ant-modal-footer > div){
+    display: flex;
+    justify-content: center;
+    flex-flow: row-reverse;
+  }
+  :global(.ant-modal-footer button:first-child){
+    margin-left: 20px;
+  }
+  :global(.ant-modal-footer .ant-btn){
+    border: 1px dotted #74b6b9 !important;
+    background: rgba(22, 34, 49, 0.9);
+    color: rgb(56, 220, 255);
+  }
+  :global(.ant-modal-footer .ant-btn-primary){
+    color: rgb(0,0,0);
+    background: rgb(56, 220, 255);
+    border:none;
+  }
+
+  :global(.basic-form){
+    flex: 1;
+    margin-left: 30px;
+  }
+  :global(.ant-form .ant-form-item-control-input-content .ant-input){
+    border: 1px dotted #74b6b9 !important;
+    background: rgba(22,34,49,0.9);
+    color: rgb(56, 220, 255);
+  }
+  :global(.ant-form .ant-form-item-label){
+    white-space: nowrap;
+  }
+  :global(.ant-form .ant-form-item-label > label){
+    color: #F4F4F4;
+    display: inline-block;
+    text-align-last: justify;
+    width: 100% !important;
+    line-height: 32px;
+  }
+
+  :global(.ant-select-multiple .ant-select-selector){
+    @media screen and(max-width: 1366px){
+      padding: 0 4px;
+    }
+  }
+  :global(.ant-form-item-label > label){
+    color: #f1f1f1;
+  }
+  :global(.ant-form-item-control .ant-select-selector){
+    border: 1px dotted #30bbbb;
+    background: transparent;
+  }
+  :global(.ant-form-item-control .ant-select-selection-placeholder){
+    color: #f1f1f1;
+  }
+  :global(.ant-form-item-control .ant-select-selection-item){
+    color: #f1f1f1;
+  }
+  :global(.ant-form-item-control .ant-select-selection-item-content){
+    color: #000;
+  }
+  :global(.ant-form .ant-form-item-control-input .ant-picker-range-separator >span){
+    color: #30bbbb !important;
+  }
+  :global(.ant-form .ant-form-item-control-input .ant-picker-suffix){
+    visibility: hidden;
+  }
+  :global(.ant-form .ant-form-item-control-input .ant-picker-clear){
+    visibility: hidden;
+  }
+  :global(.ant-form .ant-form-item-control-input .ant-picker){
+    background: transparent;
+    border: none;
+    @media screen and(max-width: 1366px){
+      padding: 0 10px;
+    }
+  }
+  :global(.ant-form .ant-form-item-control-input .ant-picker-input > input){
+    height: 30px;
+    width: 120px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px dotted #30bbbb;
+    color: rgb(56, 220, 255);
+  }
+}
+
+
+
+
