@@ -1,4 +1,4 @@
-# umi project
+# umi + react hook + antd + ts project
 
 ## Getting Started
 
